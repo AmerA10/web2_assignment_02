@@ -1,0 +1,43 @@
+/* Style the navigation menu */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.currentPage {
+    background-color: rgb(64, 124, 255);
+}
+
+.currentPage a, .pageLinks a {
+    color: white;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    text-decoration: none;
+}
+
+.currentPage a {
+    display: inline-block;
+    font-size: 24pt;
+}
+
+.pageLinks a {
+    background-color: rgb(52, 57, 68);
+    display: block;
+    font-size: 16pt;
+}
+
+.pageLinks {
+    display: none;
+}
+
+.menuIcon {
+    float: right;
+    font-size: 28pt;
+    padding-top: 6px;
+    padding-right: 12px;
+}
+
+.menuIcon:hover {
+    cursor: pointer;
+}
