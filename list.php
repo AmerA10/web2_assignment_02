@@ -1,4 +1,8 @@
+<?php 
+require_once('stock-api.php');
 
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
