@@ -13,7 +13,7 @@
 <body>
         <header class="navbar">
             <div class="currentPage">
-                <a href="index.php">Home</a>
+                <a href="index.php">adasdasdasdasd</a>
                 <i class="fa fa-bars menuIcon"></i>
             </div>
             
