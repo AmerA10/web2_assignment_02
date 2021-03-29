@@ -31,4 +31,6 @@ $connection = DatabaseHelper::createConnectionInfo(array(DBCONNECTION, DBUSER, D
 
 // we can then pass this connection variable to other classes that need it
 
+
+
 ?>
