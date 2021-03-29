@@ -27,7 +27,7 @@ spl_autoload_register(function ($class) {
 });
 
 // connect to the database
-$connection = DatabaseHelper::createConnectionInfo(array(DBCONNECTION, DBUSER, DBPASS));
+$connection = DatabaseHelper::createConnection(array(DBCONNECTION, DBUSER, DBPASS));
 
 // we can then pass this connection variable to other classes that need it
 
