@@ -33,7 +33,7 @@ function populateCompanyList(companies) {
 }
 
 function MakeClickable(companies) {
-  let list = companies.querySelectorAll('li');
+  let list = companyList.querySelectorAll('li');
     for(company of list){
         let text = company.querySelector('.list-item-section3');
         let img = company.querySelector('.list=item-section1');
