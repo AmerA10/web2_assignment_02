@@ -25,7 +25,6 @@
                 <a href="profile.php">Profile</a>
                 <a href="favorites.php">Favorites</a>
                 <a href="logout.php">Logout</a>
-                <a href="logout.php">TEST12</a>
             </div>
         </header>
     </body>
