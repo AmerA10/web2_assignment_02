@@ -1,5 +1,16 @@
 <?php
-
+    include 'includes/helpers.inc.php';
+    include 'includes/db-classes.inc.php';
+    include 'includes/config.inc.php';
+    try {
+        $conn = DatabaseHelper::createConnection(array(DBCONNSTRING,DBUSER,DBPASS));
+        $companiesGateway = new CompanyDB($conn);
+        if (isset($_GET['symbol'])) {
+            $company = $companiesGateway->getAllForCompany($_GET['symbol']);
+        }
+     } catch (PDOException $e) {
+        die( $e->getMessage() );
+     }
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,6 +38,7 @@
                 <a href="logout.php">Logout</a>
             </div>
         </header>
+        
     </body>
     <script src="js/main.js"></script>
 </html>
