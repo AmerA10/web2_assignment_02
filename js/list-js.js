@@ -35,10 +35,10 @@ function populateCompanyList(companies) {
 function MakeClickable(companies) {
   let list = companyList.querySelectorAll('li');
     for(company of list){
-        let text = company.querySelector('.list-item-section3');
-        let img = company.querySelector('.list-item-section1');
-        text.addEventListener('click', (e)=> {
-            console.log("you clicked text" + e);
+        let symbol = company.querySelector('.list-item-section3');
+        let name = company.querySelector('.list-item-section2');
+        symbol.addEventListener('click', (e)=> {
+            console.log("you clicked text" + e.textContent);
         });
         
     };
