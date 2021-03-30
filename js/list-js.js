@@ -12,7 +12,7 @@ fetch(companyAPI)
     .then( data => {
         companies.push(...data);
         populateCompanyList(companies);
-        MakeClickable(companies);
+        MakeClickable();
     })
     .catch( error => console.log(`found a ${error}`) );
 
@@ -22,8 +22,8 @@ function populateCompanyList(companies) {
     companies.forEach( company => {
         let li = document.createElement('li');
         li.innerHTML = `<div class='list-item-section1'><img src="logos/${company.symbol}.svg" style="width:60px;height:60px"></div>` 
-        + `<div class='list-item-section2'>${company.symbol}</div>`
-        + `<div class='list-item-section3'>${company.name}</div>`;
+        + `<div class='list-item-section2'><a href = single-company.php?symbol=${company.symbol}>${company.symbol}</div>`
+        + `<div class='list-item-section3'><a href = single-company.php?symbol=${company.symbol}>${company.name}</div>`;
         companyList.appendChild(li);
     });
     setTimeout( () => {
@@ -32,7 +32,7 @@ function populateCompanyList(companies) {
     }, 1000);
 }
 
-function MakeClickable(companies) {
+function MakeClickable() {
   let list = companyList.querySelectorAll('li');
     for(company of list){
         let symbol = company.querySelector('.list-item-section3');
@@ -41,7 +41,7 @@ function MakeClickable(companies) {
             console.log("you clicked text" + e.target.innerHTML);           
         });
         name.addEventListener('click', (e)=> {
-            console.log("you clicked text" + e.target.innerHTML);           
+            //todo get symbol from the name           
         });
         
     };
