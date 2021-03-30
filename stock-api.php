@@ -13,6 +13,7 @@ try {
     //$conn = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS)); 
     $gateway = new CompanyDB($connection);
     if(isset($_GET['symbol'])) {
+        
         $companies = $gateway->getAllForCompany($_GET["symbol"]); 
     }  
     else  
