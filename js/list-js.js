@@ -36,7 +36,7 @@ function MakeClickable(companies) {
   let list = companyList.querySelectorAll('li');
     for(company of list){
         let text = company.querySelector('.list-item-section3');
-        let img = company.querySelector('.list=item-section1');
+        let img = company.querySelector('.list-item-section1');
         text.addEventListener('click', ()=> {
             console.log("you clicked text");
         });
