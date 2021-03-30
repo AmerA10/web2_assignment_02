@@ -28,6 +28,11 @@
                 <a href="logout.php">Logout</a>
             </div>
         </header>
+
+        <ul id="companylist">
+                   
+        </ul>
+
     </body>
     <script src="js/main.js"></script>
     <script src ="js/singleCompany.js"></script>
