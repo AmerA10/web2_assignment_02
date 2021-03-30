@@ -12,6 +12,7 @@ fetch(companyAPI)
     .then( data => {
         companies.push(...data);
         populateCompanyList(companies);
+        MakeClickable(companies);
     })
     .catch( error => console.log(`found a ${error}`) );
 
@@ -29,4 +30,15 @@ function populateCompanyList(companies) {
         document.querySelector('.sk-circle').style.display = "none";
         companyList.style.display = "inline-block";
     }, 1000);
+}
+
+function MakeClickable(companies) {
+    companies.forEach( company=> {
+        let text = company.querySelector('li .list-item-section3');
+        let img = company.querySelector('li .list=item-section1');
+        text.addEventListener('click', ()=> {
+            console.log("you clicked text");
+        });
+        
+    });
 }
