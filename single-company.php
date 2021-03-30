@@ -1,5 +1,6 @@
 <?php
 
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,4 +30,5 @@
         </header>
     </body>
     <script src="js/main.js"></script>
+    <script src ="js/singleCompany.js"></script>
 </html>
