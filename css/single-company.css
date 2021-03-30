@@ -1,0 +1,21 @@
+.bold {
+    font-weight: bold;
+}
+
+#companyInfoPanelHeader {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#companyInfoPanel {
+    padding: 5px;
+}
+
+#companyInfoPanelBody {
+    justify-content: space-between;
+}
+
+.logo {
+    max-width: 30%;
+}
