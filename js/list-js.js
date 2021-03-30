@@ -38,9 +38,10 @@ function MakeClickable(companies) {
         let symbol = company.querySelector('.list-item-section3');
         let name = company.querySelector('.list-item-section2');
         symbol.addEventListener('click', (e)=> {
-            console.log("you clicked text" + symbol + e.target.innerHTML);
-            console.log(name);
-           
+            console.log("you clicked text" + e.target.innerHTML);           
+        });
+        name.addEventListener('click', (e)=> {
+            console.log("you clicked text" + e.target.innerHTML);           
         });
         
     };
