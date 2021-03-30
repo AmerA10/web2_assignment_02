@@ -1,9 +1,4 @@
-<?php
-if(isset([$_GET['symbol']])) {
-    echo "symbol is set" . $_GET['symbol'];
-}
 
-?>
 <!DOCTYPE html>
 <html>
 <head>
