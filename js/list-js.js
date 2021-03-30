@@ -33,12 +33,13 @@ function populateCompanyList(companies) {
 }
 
 function MakeClickable(companies) {
-    companies.forEach( company=> {
-        let text = company.querySelector('li .list-item-section3');
-        let img = company.querySelector('li .list=item-section1');
+  let list = companies.querySelectorAll('li');
+    for(company of list){
+        let text = company.querySelector('.list-item-section3');
+        let img = company.querySelector('.list=item-section1');
         text.addEventListener('click', ()=> {
             console.log("you clicked text");
         });
         
-    });
+    };
 }
