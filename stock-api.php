@@ -11,8 +11,9 @@ header("Access-Control-Allow-Origin: *");
  
 try { 
     //$conn = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS)); 
+    $companies = null;
     $gateway = new CompanyDB($connection);
-    if(isset($_GET['symbol'])) {
+    if(isset($_GET["symbol"])) {
         
         $companies = $gateway->getAllForCompany($_GET["symbol"]); 
     }  
