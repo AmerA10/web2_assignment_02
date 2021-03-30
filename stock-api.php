@@ -12,8 +12,9 @@ header("Access-Control-Allow-Origin: *");
 try { 
     //$conn = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS)); 
     $gateway = new CompanyDB($connection);
-    if (isCorrectQueryStringInfo("symbol") ) 
+    if(isset($_GET['symbol'])) {
         $companies = $gateway->getAllForCompany($_GET["symbol"]); 
+    }  
     else  
         $companies = $gateway->getAll(); 
  
