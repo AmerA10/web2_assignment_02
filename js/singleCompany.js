@@ -8,7 +8,7 @@ fetch(companyAPI)
             return response.json() 
         else
             throw new Error("Response from json failed!")
-        })s
+        })
     .then( data => {
         company.push(...data);
         console.log(companies);
