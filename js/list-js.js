@@ -19,10 +19,12 @@ fetch(companyAPI)
 event delegation to the list of company (refer to displayInformation) */
 function populateCompanyList(companies) {
     companies.forEach( company => {
+        let symbol  =company.symbol;
+        symbol = symbol.toLowerCase();
         let li = document.createElement('li');
         li.innerHTML = `<div class='list-item-section1'><img src="logos/${company.symbol}.svg" style="width:60px;height:60px"></div>` 
-        + `<div class='list-item-section2'><a href = single-company.php?symbol=${company.symbol}>${company.symbol}</div>`
-        + `<div class='list-item-section3'><a href = single-company.php?symbol=${company.symbol}>${company.name}</div>`;
+        + `<div class='list-item-section2'><a href = single-company.php?symbol=${symbol}>${company.symbol}</div>`
+        + `<div class='list-item-section3'><a href = single-company.php?symbol=${symbol}>${company.name}</div>`;
         companyList.appendChild(li);
     });
     setTimeout( () => {
