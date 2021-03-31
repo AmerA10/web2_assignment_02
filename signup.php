@@ -58,8 +58,9 @@
     <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
     <div class="clearfix">
-      <a href="login.php"><button type="button" class="cancelbtn">Cancel</button></a>
-      <button type="submit" class="signupbtn">Sign Up</button>
+    <button type="submit" class="signupbtn">Sign Up</button>
+    <a href="login.php"><button type="button" class="cancelbtn">Cancel</button></a>
+      
     </div>
   </div>
 </form>
