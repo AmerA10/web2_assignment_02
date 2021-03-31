@@ -3,8 +3,10 @@ let companies = [];
 const companyList = document.querySelector('#companylist');
 fetch(companyAPI)
     .then( response => {
-        if(response.ok)
+        if(response.ok) {
+            console.log(response.json());
             return response.json(); 
+        }
         else
             throw new Error("Response from json failed!")
         })
