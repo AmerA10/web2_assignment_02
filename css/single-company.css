@@ -2,20 +2,42 @@
     font-weight: bold;
 }
 
-#companyInfoPanelHeader {
+#companyInfoHeader {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-#companyInfoPanel {
+#companyInfo {
     padding: 5px;
 }
 
-#companyInfoPanelBody {
-    justify-content: space-between;
+.description {
+    text-align: center;
 }
 
 .logo {
     max-width: 30%;
+}
+
+.name, .symbol, .logo {
+    padding: 10px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    color: white;
+    background-color: rgb(64, 124, 255);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+}
+
+button:hover {
+    cursor: pointer;
 }
