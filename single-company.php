@@ -39,14 +39,16 @@
                 <a href="logout.php">Logout</a>
             </div>
         </header>
-        <div id="companyInfoPanel" class="fadeIn defaultView">
-            <span id="companyInfoPanelHeader">
+        <div id="companyInfo" class="fadeIn defaultView">
+            <span id="companyInfoHeader">
                 <img src='logos/<?=$company['symbol']?>.svg' class="logo">
-                <h1 class="name"><?=$company['name']?></h1>
+                <h2 class="name"><?=$company['name']?></h2>
                 <h2 class="symbol"><?=$company['symbol']?></h2>
             </span>
-            <p><?=$company['description']?></p>
-            <span id="companyInfoPanelBody">
+            <hr>
+            <p class="description"><?=$company['description']?></p>
+            <hr>
+            <span id="companyInfoBody">
                 <div>
                     <span class="bold">Sector: </span><?=$company['sector']?><br>
                     <span class="bold">Subindustry: </span><?=$company['subindustry']?><br>
@@ -57,6 +59,11 @@
                     <a href="" id="companyURL"></a>
                 </div>
             </span>
+            <br/>
+            <div class="buttonContainer">
+                <button class="favoritesButton">Add to Favorites</button>
+                <button class="historyButton">History</button>
+            </div>
         </div>
     </body>
     <script src="js/main.js"></script>
