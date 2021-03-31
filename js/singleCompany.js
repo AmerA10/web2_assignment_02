@@ -1,6 +1,6 @@
 const companyAPI = 'stock-api.php';
 
-let companies = []; 
+let company = []; 
 const companyList = document.querySelector('#companylist');
 fetch(companyAPI)
     .then( response => {
@@ -8,9 +8,9 @@ fetch(companyAPI)
             return response.json() 
         else
             throw new Error("Response from json failed!")
-        })
+        })s
     .then( data => {
-        companies.push(...data);
+        company.push(...data);
         console.log(companies);
        
     })
