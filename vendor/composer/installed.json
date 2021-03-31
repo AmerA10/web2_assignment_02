@@ -50,5 +50,7 @@
         }
     ],
     "dev": true,
-    "dev-package-names": []
+    "dev-package-names": [
+        "heroku/heroku-buildpack-php"
+    ]
 }
