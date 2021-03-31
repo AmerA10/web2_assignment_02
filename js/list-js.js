@@ -1,5 +1,4 @@
 const companyAPI = 'stock-api.php';
-
 let companies = []; 
 const companyList = document.querySelector('#companylist');
 fetch(companyAPI)
