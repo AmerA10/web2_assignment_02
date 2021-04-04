@@ -13,8 +13,11 @@ try {
     //$conn = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS)); 
     $companies = null;
     $gateway = new CompanyDB($connection);
+    if(isset($_REQUEST["symbol"])) {
+        $companies = $_REQUEST["symbol"];
+    }
     
-    if(isset($_GET["symbol"]) && isCorrectQueryStringInfo($_GET["symbol"])) {
+    else if(isset($_GET["symbol"]) && isCorrectQueryStringInfo($_GET["symbol"])) {
         
         $companies = $gateway->getAllForCompany($_GET["symbol"]); 
     }  
