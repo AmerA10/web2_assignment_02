@@ -34,6 +34,7 @@ function populateCompanyList(companies) {
 }
 
 function MakeClickable() {
+   
   let list = companyList.querySelectorAll('li');
     for(company of list){
         let symbol = company.querySelector('.list-item-section3');
@@ -47,3 +48,4 @@ function MakeClickable() {
         
     };
 }
+<?php echo "what" ?>

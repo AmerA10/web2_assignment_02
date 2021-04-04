@@ -8,6 +8,7 @@ else  {
 $conn = "api-companies.php?symbol=$symbol";
 
 
+
 ?>
 
 
