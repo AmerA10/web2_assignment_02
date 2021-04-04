@@ -6,7 +6,7 @@ else  {
     $symbol = "Not exist";
 }
 $conn = "api-companies.php?symbol=$symbol";
-
+echo $_REQUEST["symbol"];
 
 
 ?>
