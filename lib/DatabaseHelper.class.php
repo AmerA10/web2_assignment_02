@@ -18,18 +18,20 @@ class DatabaseHelper {
         // if there are parameters then do a prepared statement
         if (isset($parameters)) {
         // Ensure parameters are in an array
-        if (!is_array($parameters)) {
-        $parameters = array($parameters);
-        }
+            if (!is_array($parameters)) {
+                $parameters = array($parameters);
+            }
         // Use a prepared statement if parameters
-        $statement = $connection->prepare($sql);
-        $executedOk = $statement->execute($parameters);
-        if (! $executedOk) throw new PDOException;
-        } else {
+            $statement = $connection->prepare($sql);
+            $executedOk = $statement->execute($parameters);
+            if (! $executedOk) throw new PDOException;
+        } 
+        else {
         // Execute a normal query
-        $statement = $connection->query($sql);
-        if (!$statement) throw new PDOException;
+            $statement = $connection->query($sql);
+            if (!$statement) throw new PDOException;
         }
+        
         return $statement;
         }
        } 

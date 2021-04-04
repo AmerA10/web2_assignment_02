@@ -4,7 +4,7 @@ const companyList = document.querySelector('#companylist');
 fetch(companyAPI)
     .then( response => {
         if(response.ok) 
-            return response.json(); 
+            return response.json() 
         else
             throw new Error("Response from json failed!")
         })
