@@ -1,4 +1,4 @@
-const companyAPI = 'stock-api.php';
+const companyAPI = 'api-companies.php';
 
 let company = []; 
 const companyList = document.querySelector('#companylist');
