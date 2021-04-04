@@ -14,7 +14,7 @@ try {
     $companies = null;
     $gateway = new CompanyDB($connection);
     if(isset($_REQUEST["symbol"])) {
-        echo "DONE";
+        echo $gateway->getAllForCompany("mmm"); 
     }
     
     else if(isset($_GET["symbol"]) && isCorrectQueryStringInfo($_GET["symbol"])) {
