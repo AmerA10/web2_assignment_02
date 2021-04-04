@@ -11,7 +11,7 @@ fetch(companyAPI)
         })
     .then( data => {
         company.push(...data);
-        console.log(companies);
+        console.log(company);
        
     })
     .catch( error => console.log(`found a ${error}`) );
