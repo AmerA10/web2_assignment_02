@@ -10,6 +10,7 @@ fetch(companyAPI)
             throw new Error("Response from json failed!")
         })
     .then( data => {
+        console.log(data);
         company.push(...data);
         console.log(company);
        
