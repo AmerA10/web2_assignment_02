@@ -5,6 +5,7 @@ if(isset($_GET['symbol'])) {
 else  {
     $symbol = "Not exist";
 }
+$conn = "api-companies.php?symbol=$symbol";
 
 
 ?>
