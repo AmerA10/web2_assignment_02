@@ -14,7 +14,7 @@ try {
     $companies = null;
     $gateway = new CompanyDB($connection);
     if(isset($_REQUEST["symbol"])) {
-        $companies = $_REQUEST["symbol"];
+        echo "DONE";
     }
     
     else if(isset($_GET["symbol"]) && isCorrectQueryStringInfo($_GET["symbol"])) {
