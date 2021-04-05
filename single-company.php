@@ -2,7 +2,7 @@
 
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
-    require_once('api-companies.php');
+    $stuff = require_once('api-companies.php');
 }
 else  {
     $symbol = "Not exist";
