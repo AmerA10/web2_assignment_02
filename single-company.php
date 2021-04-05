@@ -11,7 +11,7 @@ else  {
 try {
 
     $comp = json_decode($companies);
-    echo $comp;
+    
 
 }
 catch(Exception $e){
