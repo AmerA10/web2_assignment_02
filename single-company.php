@@ -3,9 +3,9 @@
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
 
-    ob_start();
-    include('api-companies.php');
-    $otherResults = ob_get_clean();
+   
+    $otherResults = include('api-companies.php');
+    
 
     
 }
