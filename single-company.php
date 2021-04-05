@@ -1,5 +1,5 @@
 <?php 
-$stuff = require_once("api-companies.php");
+
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
    
@@ -12,7 +12,7 @@ else  {
 }
 
 try {
-    
+    $stuff = require_once("api-companies.php");
     $actual = json_decode($stuff,true);
     // $company = $actual;
     // foreach($company as $key => $value) {
