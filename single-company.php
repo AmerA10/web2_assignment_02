@@ -8,7 +8,7 @@ else  {
     $symbol = "Not exist";
 }
 
-echo $companies;
+
 
 ?>
 <!DOCTYPE html>
