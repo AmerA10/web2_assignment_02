@@ -1,8 +1,8 @@
 <?php 
-
+$stuff = require_once("api-companies.php");
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
-    $otherStuff = include('api-companies.php');
+   
    
 
 }
@@ -13,7 +13,7 @@ else  {
 
 try {
     
-    $actual = json_decode($otherStuff,true);
+    $actual = json_decode($stuff,true);
     // $company = $actual;
     // foreach($company as $key => $value) {
     //     echo $value;
