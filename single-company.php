@@ -2,7 +2,8 @@
 
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
- 
+        $content = file_get_contents('api-companies.php');
+        $con2 = include('api-companies.php');
 }
 else  {
     $symbol = "Not exist";
@@ -11,7 +12,8 @@ else  {
 
 try {
     echo $symbol;
-    
+    echo $content;
+    echo $con2->$comapnies;
 
 }
 catch(Exception $e){
