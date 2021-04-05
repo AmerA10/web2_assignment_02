@@ -7,7 +7,7 @@ if(isset($_GET['symbol'])) {
     include('api-companies.php');
     $otherResults = ob_get_clean();
 
-    echo 'others results' . $otherResults;
+    
 }
 else  {
     $symbol = "Not exist";
@@ -16,6 +16,12 @@ else  {
 
 try {
     echo $symbol;
+    echo 'others results' . $otherResults;
+    $actual = json_decode($otherResults,true);
+    foreach($actual as $ket => $value) {
+        echo $value;
+    }
+
 
 }
 catch(Exception $e){
