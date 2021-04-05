@@ -14,10 +14,10 @@ else  {
 try {
     
     $actual = json_decode($otherStuff,true);
-    $company = $actual;
-    foreach($company as $key => $value) {
-        echo $value;
-    }
+    // $company = $actual;
+    // foreach($company as $key => $value) {
+    //     echo $value;
+    // }
 }
 catch(Exception $e){
     die($e ->getMessage());
