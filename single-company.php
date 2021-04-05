@@ -14,7 +14,7 @@ else  {
 try {
     
     $actual = json_decode($otherStuff,true);
-    $company = $actual[0];
+    $company = $actual;
     foreach($company as $key => $value) {
         echo $value;
     }
