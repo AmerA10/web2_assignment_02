@@ -3,7 +3,7 @@
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
     $otherStuff = include('api-companies.php');
-    $results = file_get_contents('api-companies.php');
+   
 
 }
 else  {
@@ -13,8 +13,8 @@ else  {
 
 try {
     
-    $actual = json_decode($results,true);
-    $company = $actual;
+    $actual = json_decode($otherStuff,true);
+    $company = $actual[0];
     foreach($company as $key => $value) {
         echo $value;
     }
