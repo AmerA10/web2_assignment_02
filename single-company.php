@@ -10,9 +10,7 @@ else  {
 }
 
 try {
-    ob_start();
-    require_once( 'api-companies.php' );
-    $actual = ob_get_clean();
+    
    // $actual = json_decode($stuff,true);
     // $company = $actual;
     // foreach($company as $key => $value) {
