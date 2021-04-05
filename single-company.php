@@ -18,8 +18,6 @@ try {
 
 }
 
-
-
 catch(Exception $e){
     die($e ->getMessage());
 }
@@ -58,9 +56,8 @@ catch(Exception $e){
      
         </h1>
         <ul id="companylist">
-        <?php foreach($company as $key => $value) {
-            echo $value;
-        }
+        <?php 
+            
         ?>
         </ul>
 
