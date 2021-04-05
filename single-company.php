@@ -5,7 +5,6 @@ if(isset($_GET['symbol'])) {
 
     $results = file_get_contents('api-companies.php');
 
-    
 }
 else  {
     $symbol = "Not exist";
@@ -16,6 +15,9 @@ try {
     
     $actual = json_decode($results,true);
     $company = $actual[0];
+    foreach($company as $key => $value) {
+        echo $value;
+    }
 }
 catch(Exception $e){
     die($e ->getMessage());
