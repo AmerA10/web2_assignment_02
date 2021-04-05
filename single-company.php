@@ -1,22 +1,22 @@
 <?php 
-require_once("api-companies.php");
-if(isset($_GET['symbol'])) {
-    $symbol = $_GET['symbol'];
+// require_once("api-companies.php");
+// if(isset($_GET['symbol'])) {
+//     $symbol = $_GET['symbol'];
  
-}
-else  {
-    $symbol = "Not exist";
-}
+// }
+// else  {
+//     $symbol = "Not exist";
+// }
 
-try {
-    $comp = $companies;
-    echo $comp;
+// try {
+//     $comp = $companies;
+//     echo $comp;
     
 
-}
-catch(Exception $e){
-    die($e ->getMessage());
-}
+// }
+// catch(Exception $e){
+//     die($e ->getMessage());
+// }
 
 ?>
 <!DOCTYPE html>
@@ -58,6 +58,6 @@ catch(Exception $e){
 
     </body>
     <script src="js/main.js"></script>
-  
+    <script src= "js/singleCompany.js"></script>
     
 </html>
