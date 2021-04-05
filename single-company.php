@@ -10,12 +10,12 @@ else  {
 
 try {
 
-    echo $companies;
+    echo json_decode($companies);
   
 
 }
 catch(Exception $e){
-
+    die($e ->getMessage());
 }
 
 ?>
