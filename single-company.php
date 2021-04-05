@@ -2,7 +2,7 @@
 
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
-
+    $otherStuff = include('api-companies.php');
     $results = file_get_contents('api-companies.php');
 
 }
