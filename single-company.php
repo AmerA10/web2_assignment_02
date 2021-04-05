@@ -10,7 +10,7 @@ else  {
 }
 
 try {
-    
+    require("api-comapnies.php");
    // $actual = json_decode($stuff,true);
     // $company = $actual;
     // foreach($company as $key => $value) {
