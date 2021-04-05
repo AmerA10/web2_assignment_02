@@ -17,7 +17,7 @@ else  {
 try {
     echo $symbol;
     
-    $actual = json_decode($otherResults);
+    $actual = json_decode($otherResults,true);
     print_r($actual);
 
 
