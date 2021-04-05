@@ -2,7 +2,12 @@
 
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
-
+    $result = file_get_contents('api-companies.php');
+    ob_start();
+    include('api-companies.php');
+    $otherResults = ob_get_clean();
+    echo $result;
+    echo $otherResults;
 }
 else  {
     $symbol = "Not exist";
