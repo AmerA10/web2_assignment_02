@@ -10,7 +10,7 @@ else  {
 
 try {
 
-    $comp = json_decode($companies);
+    $comp[] = json_decode($companies);
     
 
 }
