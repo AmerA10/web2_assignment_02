@@ -6,8 +6,8 @@ if(isset($_GET['symbol'])) {
     ob_start();
     include('api-companies.php');
     $otherResults = ob_get_clean();
-    echo $result;
-    echo $otherResults;
+    echo 'results' . $result;
+    echo 'others results' . $otherResults;
 }
 else  {
     $symbol = "Not exist";
