@@ -19,7 +19,7 @@ try {
     
     $actual = json_decode($otherResults);
     foreach($actual as $key) {
-        echo $value;
+        echo $key;
     }
 
 
