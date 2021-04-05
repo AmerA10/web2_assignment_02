@@ -10,7 +10,7 @@ else  {
 
 try {
 
-    echo $companies;
+    echo $companies[0];
     
 
 }
