@@ -10,7 +10,7 @@ else  {
 
 try {
 
-    $comp[] = json_decode($companies);
+    echo $companies;
     
 
 }
@@ -19,8 +19,6 @@ catch(Exception $e){
 }
 
 ?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
