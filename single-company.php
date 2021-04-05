@@ -15,13 +15,11 @@ else  {
 }
 
 try {
-    echo $symbol;
+    
     
     $actual = json_decode($otherResults,true);
     $company = $actual[0];
-    foreach($company as $key => $value) {
- 
-    }
+    
 
 
 }
