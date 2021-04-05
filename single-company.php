@@ -4,7 +4,7 @@ if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
     $response = file_get_contents("api-companies.php");
     $response = json_decode($response);
-    echo $response;
+    echo $response[0];
 }
 else  {
     $symbol = "Not exist";
