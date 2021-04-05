@@ -24,7 +24,7 @@ try {
     }
     
  
-    echo json_encode( $companies, JSON_NUMERIC_CHECK );
+    return json_encode( $companies, JSON_NUMERIC_CHECK );
     
 } catch (Exception $e) {   
     die( $e->getMessage() ); 

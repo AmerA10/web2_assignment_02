@@ -10,9 +10,7 @@ else  {
 }
 
 try {
-    $results = file_get_contents('api-companies.php');
-    $data = json_decode($results, true);
-    echo $data[0];
+
    // $actual = json_decode($stuff,true);
     // $company = $actual;
     // foreach($company as $key => $value) {
