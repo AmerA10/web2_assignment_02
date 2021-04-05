@@ -3,6 +3,7 @@
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
     $response = file_get_contents("api-companies.php");
+    $response = json_decode($response);
     echo $response;
 }
 else  {
