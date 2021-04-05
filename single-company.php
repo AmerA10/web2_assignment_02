@@ -18,9 +18,7 @@ try {
     echo $symbol;
     
     $actual = json_decode($otherResults);
-    foreach($actual as $key) {
-        echo $key;
-    }
+    echo $actual;
 
 
 }
