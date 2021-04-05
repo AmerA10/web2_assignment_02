@@ -1,13 +1,19 @@
 <?php 
+require_once('api-companies.php');
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
 }
 else  {
     $symbol = "Not exist";
 }
-$conn = "api-companies.php?symbol=$symbol";
-echo $_REQUEST["symbol"];
 
+try {
+    echo $companies;
+
+}
+catch(Exception $e){
+
+}
 
 ?>
 
@@ -51,6 +57,6 @@ echo $_REQUEST["symbol"];
 
     </body>
     <script src="js/main.js"></script>
-    <script src="js/singleCompany.js"></script>
+  
     
 </html>
