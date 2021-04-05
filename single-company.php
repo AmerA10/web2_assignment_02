@@ -3,9 +3,7 @@
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
 
-    ob_start();
-    include('api-companies.php');
-    $otherResults = ob_get_clean();
+    $results = file_get_contents('api-companies.php');
 
     
 }
@@ -16,17 +14,12 @@ else  {
 
 try {
     
-    
-    $actual = json_decode($otherResults,true);
-    $company = $actual[0];
-    
-
-
+    //$actual = json_decode($otherResults,true);
+    //$company = $actual[0];
 }
 catch(Exception $e){
     die($e ->getMessage());
 }
-
 ?>
 <!DOCTYPE html>
 <html>
