@@ -16,9 +16,9 @@ else  {
 
 try {
     echo $symbol;
-    echo 'others results' . $otherResults;
+    
     $actual = json_decode($otherResults,true);
-    foreach($actual as $ket => $value) {
+    foreach($actual as $key => $value) {
         echo $value;
     }
 
