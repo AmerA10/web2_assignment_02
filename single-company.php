@@ -9,9 +9,9 @@ else  {
 }
 
 try {
-    $comp = $companies;
-    foreach($companies as $key => $value) {
-        echo $value;
+    
+    foreach($companies as $key) {
+        echo $key;
     }
     
 
