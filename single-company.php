@@ -19,10 +19,7 @@ try {
     
     $actual = json_decode($otherResults,true);
     $company = $actual[0];
-    foreach($company as $key => $value) {
-        echo $key;
-        echo $value;
-    }
+    
 
 
 }
