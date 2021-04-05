@@ -9,7 +9,7 @@ else  {
 }
 
 try {
-    $comp = json_decode($companies);
+    $comp = json_decode($companies,true);
    foreach($comp as $key => $vlaue) {
        echo $value;
    }
