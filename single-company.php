@@ -9,8 +9,8 @@ else  {
 }
 
 try {
-    
-    echo $_REQUEST["symbol"];
+
+    echo $companies;
   
 
 }
