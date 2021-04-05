@@ -5,7 +5,7 @@ require_once 'includes/helpers.inc.php';
 require_once 'includes/stock-config.inc.php';
  
 // Tell the browser to expect JSON rather than HTML
-//header('Content-type: application/json'); 
+header('Content-type: application/json'); 
 // indicate whether other domains can use this API
 header("Access-Control-Allow-Origin: *"); 
 
