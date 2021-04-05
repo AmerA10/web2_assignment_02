@@ -1,15 +1,16 @@
 <?php 
-
+require_once("api-companies.php");
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
-    $company = readfile("api-comapnies.php?symbol=$symbol");    
+ 
 }
 else  {
     $symbol = "Not exist";
 }
 
 try {
-    echo $company;
+    
+    echo $_REQUEST["symbol"];
   
 
 }
