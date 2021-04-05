@@ -3,9 +3,9 @@
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
 
-   
-    $otherResults = include('api-companies.php');
-    
+    ob_start();
+    include('api-companies.php');
+    $otherResults = ob_get_clean();
 
     
 }
@@ -19,7 +19,9 @@ try {
     
     $actual = json_decode($otherResults,true);
     $company = $actual[0];
-    
+    foreach($company as $key => $value) {
+ 
+    }
 
 
 }
@@ -57,9 +59,7 @@ catch(Exception $e){
         </header>
 
         <h1>
-        <?php
-        echo $symbol;
-        ?>
+     
         </h1>
         <ul id="companylist">
 
