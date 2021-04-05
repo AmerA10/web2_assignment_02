@@ -11,11 +11,8 @@ else  {
 
 try {
 
-   // $actual = json_decode($stuff,true);
-    // $company = $actual;
-    // foreach($company as $key => $value) {
-    //     echo $value;
-    // }
+   require_once('api-companies.php');
+   
 }
 catch(Exception $e){
     die($e ->getMessage());
