@@ -18,7 +18,11 @@ try {
     echo $symbol;
     
     $actual = json_decode($otherResults,true);
-    print_r($actual);
+    $company = $actual[0];
+    foreach($company as $key => $value) {
+        echo $key;
+        echo $value;
+    }
 
 
 }
