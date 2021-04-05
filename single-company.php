@@ -14,8 +14,8 @@ else  {
 
 try {
     
-    //$actual = json_decode($otherResults,true);
-    //$company = $actual[0];
+    $actual = json_decode($results,true);
+    $company = $actual[0];
 }
 catch(Exception $e){
     die($e ->getMessage());
