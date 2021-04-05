@@ -8,17 +8,7 @@ else  {
     $symbol = "Not exist";
 }
 
-try {
-    
-    foreach($companies as $key) {
-        echo $key;
-    }
-    
-
-}
-catch(Exception $e){
-    die($e ->getMessage());
-}
+echo $companies;
 
 ?>
 <!DOCTYPE html>
