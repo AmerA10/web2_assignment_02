@@ -8,8 +8,7 @@ try {
 
     if(isset($_GET['symbol'])) {
         $symbol = $_GET['symbol'];
-        $company = $gateway->getAllForCompany($symbol);
-        print_r($company);
+        $company = $gateway->getAllForCompany($symbol)[0];
     
     }
     else  {
@@ -59,7 +58,10 @@ catch(Exception $e){
      
         </h1>
         <ul id="companylist">
-
+        <?php foreach($company as $key => $value) {
+            echo $value;
+        }
+        ?>
         </ul>
 
     </body>
