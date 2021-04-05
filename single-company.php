@@ -2,9 +2,7 @@
 
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
-    $response = file_get_contents("api-companies.php");
-    $response = json_decode($response);
-    echo $response[0];
+    require_once('api-companies.php');
 }
 else  {
     $symbol = "Not exist";
