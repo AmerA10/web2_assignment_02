@@ -8,7 +8,7 @@ require_once 'includes/stock-config.inc.php';
 header('Content-type: application/json'); 
 // indicate whether other domains can use this API
 header("Access-Control-Allow-Origin: *"); 
-echo $_SERVER['REQUEST_URI']; 
+
 try { 
     //$conn = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS)); 
     $companies = null;
