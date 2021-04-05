@@ -1,9 +1,7 @@
 <?php 
-
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
-   
-   
+
 
 }
 else  {
@@ -12,8 +10,10 @@ else  {
 }
 
 try {
-    $stuff = require_once("api-companies.php");
-    $actual = json_decode($stuff,true);
+    ob_start();
+    require_once( 'api-companies.php' );
+    $actual = ob_get_clean();
+   // $actual = json_decode($stuff,true);
     // $company = $actual;
     // foreach($company as $key => $value) {
     //     echo $value;
@@ -23,6 +23,8 @@ catch(Exception $e){
     die($e ->getMessage());
 }
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
