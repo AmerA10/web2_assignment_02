@@ -2,14 +2,14 @@
 
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
-    require_once("api-companies.php?symbol=$symbol");
+    $company = readfile("api-comapnies.php?symbol=$symbol");    
 }
 else  {
     $symbol = "Not exist";
 }
 
 try {
-    echo $_SERVER['REQUEST_URI'];
+    echo $company;
   
 
 }
