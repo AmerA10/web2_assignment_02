@@ -1,16 +1,17 @@
 <?php 
-require_once("api-companies.php");
+
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
- 
+    $response = file_get_contents("api-companies.php");
+    echo $response;
 }
 else  {
     $symbol = "Not exist";
 }
 
-
-
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
