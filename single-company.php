@@ -2,10 +2,7 @@
 
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
-        $content = file_get_contents('api-companies.php');
-        $con2 = include('api-companies.php');
-        echo $con2;
-        echo $content;
+
 }
 else  {
     $symbol = "Not exist";
