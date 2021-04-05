@@ -10,7 +10,7 @@ else  {
 }
 
 try {
-    require_once("api-companies.php");
+    $results = require_once("api-companies.php");
    // $actual = json_decode($stuff,true);
     // $company = $actual;
     // foreach($company as $key => $value) {
