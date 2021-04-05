@@ -1,5 +1,5 @@
 <?php 
-$foo = include("api-companies.php");
+
 if(isset($_GET['symbol'])) {
     $symbol = $_GET['symbol'];
  
@@ -10,7 +10,7 @@ else  {
 }
 
 try {
-    echo $foo;
+    echo $symbol;
     
 
 }
