@@ -18,7 +18,7 @@ try {
     echo $symbol;
     
     $actual = json_decode($otherResults);
-    echo $actual;
+    print_r($actual);
 
 
 }
