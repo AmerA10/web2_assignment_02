@@ -8,7 +8,7 @@ else  {
 }
 
 try {
-    echo $companies;
+    echo $companies . "?symbol=$symbol";
 
 }
 catch(Exception $e){
