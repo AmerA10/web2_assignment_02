@@ -13,8 +13,8 @@ else  {
 try {
     echo $symbol;
     echo $content;
-    echo $con2->$comapnies;
-
+    echo $comapnies;
+    echo $con2;
 }
 catch(Exception $e){
     die($e ->getMessage());
