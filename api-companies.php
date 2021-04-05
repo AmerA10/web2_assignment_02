@@ -18,13 +18,14 @@ try {
     if(isset($_GET["symbol"])) {
         
         $companies = $gateway->getAllForCompany($_GET["symbol"]); 
-        $companies =  json_encode( $companies, JSON_NUMERIC_CHECK );
+   
+
     }  
     else   {
         $companies = $gateway->getAll(); 
-        echo json_encode( $companies, JSON_NUMERIC_CHECK );
+       
     }
-    
+    echo json_encode( $companies, JSON_NUMERIC_CHECK );
     
     
     

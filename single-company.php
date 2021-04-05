@@ -1,19 +1,26 @@
 <?php 
-if(isset($_GET['symbol'])) {
-    $symbol = $_GET['symbol'];
+require_once 'includes/db-classes.inc.php';
+require_once 'includes/helpers.inc.php'; 
+require_once 'includes/stock-config.inc.php';
 
-
-}
-else  {
-    $symbol = "Not exist";
-    
-}
-
+$gateway = new CompanyDB($connection);
 try {
 
-   require_once('api-companies.php');
-   
+    if(isset($_GET['symbol'])) {
+        $symbol = $_GET['symbol'];
+        $company = $gateway->getAllForCompany($symbol);
+        print_r($company);
+    
+    }
+    else  {
+        $symbol = "Not exist";
+        
+    }
+
 }
+
+
+
 catch(Exception $e){
     die($e ->getMessage());
 }
