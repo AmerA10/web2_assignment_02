@@ -1,5 +1,4 @@
 <?php
-
 class CompanyDB { 
     private static $baseSQL = "SELECT * FROM Companies"; 
     
