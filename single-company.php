@@ -57,8 +57,8 @@ catch(Exception $e){
         </h1>
         <ul id="companylist">
         <?php 
-        echo "<li> $company[$symbol]";
-        
+        echo "<li> " . $company['symbol'];
+
         ?>
         </ul>
 
