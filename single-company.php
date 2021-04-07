@@ -8,8 +8,7 @@ try {
 
     if(isset($_GET['symbol'])) {
         $symbol = $_GET['symbol'];
-        $company = $gateway->getAllForCompany($symbol)[0];
-        print_r($company);    
+        $company = $gateway->getAllForCompany($symbol)[0];    
     }
 
     else  {
