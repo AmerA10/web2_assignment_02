@@ -58,6 +58,13 @@ catch(Exception $e){
         <ul id="companylist">
         <?php 
         echo "<li> " . $company['symbol'];
+        echo '<li> ' . $company['name'];
+        echo "<li> " . $company["sector"];
+        echo "<li> " . $company["subindustry"];
+        echo "<li> " . $company['address'];
+        echo "<li> " . $company['exchange'];
+        echo "<li> " . $company['website'];
+        echo "<li> " . $company['description'];
 
         ?>
         </ul>
