@@ -56,17 +56,17 @@ catch(Exception $e){
      
         </h1>
         <ul id="companylist">
-        <?php 
-        echo "<li> <img src= " . $company['symbol'] . '.svg> <li>';
-        echo "<li> " . $company['symbol'];
-        echo '<li> ' . $company['name'];
-        echo "<li> " . $company["sector"];
-        echo "<li> " . $company["subindustry"];
-        echo "<li> " . $company['address'];
-        echo "<li> " . $company['exchange'];
-        echo "<li> " . $company['website'];
-        echo "<li> " . $company['description'];
+        <?php
 
+        echo "<li> <img src=".$company['symbol'].'.svg></li>';
+        echo "<li> " . $company['symbol'] . "</li>";
+        echo '<li> ' . $company['name'] . "</li>";
+        echo "<li> " . $company["sector"] . "</li>";
+        echo "<li> " . $company["subindustry"] . "</li>";
+        echo "<li> " . $company['address'] . "</li>";
+        echo "<li> " . $company['exchange'] . "</li>";
+        echo "<li> " . $company['website'] . "</li>";
+        echo "<li> " . $company['description'] . "</li>";
 
         ?>
         </ul>
