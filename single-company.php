@@ -9,11 +9,11 @@ try {
     if(isset($_GET['symbol'])) {
         $symbol = $_GET['symbol'];
         $company = $gateway->getAllForCompany($symbol)[0];
-    
+        print_r($compay);    
     }
+
     else  {
-        $symbol = "Not exist";
-        
+        $symbol = "Not exist";        
     }
 
 }
@@ -57,12 +57,11 @@ catch(Exception $e){
         </h1>
         <ul id="companylist">
         <?php 
-            
+
         ?>
         </ul>
 
     </body>
     <script src="js/main.js"></script>
-   
-    
+
 </html>

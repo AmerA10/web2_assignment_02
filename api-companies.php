@@ -1,5 +1,5 @@
 <?php 
-//require_once 'includes/config.inc.php'; 
+
 require_once 'includes/db-classes.inc.php';
 require_once 'includes/helpers.inc.php'; 
 require_once 'includes/stock-config.inc.php';
@@ -10,7 +10,7 @@ header('Content-type: application/json');
 header("Access-Control-Allow-Origin: *"); 
 
 try { 
-    //$conn = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS)); 
+   
     $companies = null;
     $gateway = new CompanyDB($connection);
     
