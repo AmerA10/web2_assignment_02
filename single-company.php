@@ -58,7 +58,7 @@ catch(Exception $e){
         <ul id="companylist">
         <?php
 
-        echo "<li> <img src=".$company['symbol'].'.svg></li>';
+        echo "<li> <img src=A.svg></li> "; 
         echo "<li> " . $company['symbol'] . "</li>";
         echo '<li> ' . $company['name'] . "</li>";
         echo "<li> " . $company["sector"] . "</li>";
