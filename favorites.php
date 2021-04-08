@@ -27,6 +27,12 @@
                 <a href="logout.php">Logout</a>
             </div>
         </header>
+        <div>
+            <!-- example code 
+            creating a table with php using the $_GET for session array
+
+            -->
+        <div>
     </body>
     <script src="js/main.js"></script>
 </html>

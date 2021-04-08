@@ -17,6 +17,7 @@ try {
         $companies = $gateway->getAll(); 
  
     echo json_encode( $companies, JSON_NUMERIC_CHECK ); 
+    $conn = null;
 } catch (Exception $e) {   
     die( $e->getMessage() ); 
 } 
