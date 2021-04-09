@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+if (isset($_SESSION['fav']) && !empty($_SESSION['fav'])) {
+    //$favorites = $_SESSION('fav');
+    //for ($favorites as $fav => $value) {
+
+    //}
+}
 
 ?>
 <!DOCTYPE html>
@@ -28,6 +36,9 @@
             </div>
         </header>
         <div>
+            <table style="width:100%" id="favtable">
+
+            </table>
             <!-- example code 
             creating a table with php using the $_GET for session array
 

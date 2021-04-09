@@ -61,8 +61,8 @@
             </span>
             <br/>
             <div class="buttonContainer">
-                <a href="addtofav.php?symbol=<?=$company['symbol']?>" class="favoritesButton">Add to Favorites</button>
-                <button class="historyButton">History</button>
+                <a href='addtofav.php'>Add to Favorites</a>
+                <a href='history.php?symbol=<?=$company['symbol']?>'>History</a>
             </div>
         </div>
     </body>
