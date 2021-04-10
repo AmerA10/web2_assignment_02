@@ -1,11 +1,24 @@
 <?php
 session_start();
 
-if (isset($_SESSION['fav']) && !empty($_SESSION['fav'])) {
-    //$favorites = $_SESSION('fav');
-    //for ($favorites as $fav => $value) {
-
-    //}
+function createFavList() {
+    if (isset($_SESSION['fav']) && !empty($_SESSION['fav'])) {
+        $favorites = $_SESSION['fav'];
+    
+        $keys = array_keys($favorites);
+    
+        for($i = 0; $i < count($favorites); $i++) {
+            foreach ($favorites[$keys[$i]] as $array) {
+                echo '<tr>';
+                echo "<td><img src='logos/" . $array['symbol'] . ".svg' style='width:60px;height:60px'></td>";
+                echo "<td>" . $array['symbol'] . "</td>";
+                echo "<td>" . $array['name'] . "</td>";
+                echo "<td><a href='removefavorite.php?entry=" . $i . "'>Remove</a></td>";
+                echo '</tr>';
+            }
+    
+        }
+    }
 }
 
 ?>
@@ -37,12 +50,9 @@ if (isset($_SESSION['fav']) && !empty($_SESSION['fav'])) {
         </header>
         <div>
             <table style="width:100%" id="favtable">
-
+                <?=createFavList();?>
             </table>
-            <!-- example code 
-            creating a table with php using the $_GET for session array
-
-            -->
+            <a href='removefavorite.php?entry=all'>Remove All</a>
         <div>
     </body>
     <script src="js/main.js"></script>

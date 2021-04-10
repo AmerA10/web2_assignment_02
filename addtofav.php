@@ -12,9 +12,10 @@
     }
     $fav = $_SESSION["fav"];
     $fav[] = $companiesGateway->getAllForCompany($_GET["symbol"]);
+    //$fav[] = $_GET["symbol"];
     $_SESSION["fav"] = $fav;
-    //print_r($fav);
+    print_r($fav);
     //session_destroy();
     $conn = null;
-    header("location: " . $_SERVER["HTTP_REFERER"]);
+    //header("location: " . $_SERVER["HTTP_REFERER"]);
 ?>
