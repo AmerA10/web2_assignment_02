@@ -1,5 +1,18 @@
 <?php
+    include 'includes/helpers.inc.php';
+    include 'includes/db-classes.inc.php';
+    include 'includes/config.inc.php';
 
+    try {
+        $conn = DatabaseHelper::createConnection(array(DBCONNSTRING,DBUSER,DBPASS));
+        $historyGateway = new HistoryDB($conn);
+        if (isset($_GET['symbol']) && isset($_GET['sort'])) {
+            $symbol = $_GET['symbol'];
+            $history = $historyGateway->getAllForCompany($_GET['symbol'], $_GET['sort']);
+        }
+     } catch (PDOException $e) {
+        die( $e->getMessage() );
+     }
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,17 +44,33 @@
                 <table class="historyTable">
                     <thead>
                         <tr>
-                            <th><a href='history.php?sort=date'>Date</a></th>
-                            <th><a href='history.php?sort=open'>Open</a></th>
-                            <th><a href='history.php?sort=high'>High</a></th>
-                            <th><a href='history.php?sort=low'>Low</a></th>
-                            <th><a href='history.php?sort=close'>Close</a></th>
-                            <th><a href='history.php?sort=volume'>Volume</th>
+                            <th><a href='history.php?symbol=<?=$symbol?>&sort=date'>Date</a></th>
+                            <th><a href='history.php?symbol=<?=$symbol?>&sort=open'>Open</a></th>
+                            <th><a href='history.php?symbol=<?=$symbol?>&sort=high'>High</a></th>
+                            <th><a href='history.php?symbol=<?=$symbol?>&sort=low'>Low</a></th>
+                            <th><a href='history.php?symbol=<?=$symbol?>&sort=close'>Close</a></th>
+                            <th><a href='history.php?symbol=<?=$symbol?>&sort=volume'>Volume</th>
                         </tr>
                         
                     </thead>
                     <tbody>
-                        
+                        <?php
+                            foreach ($history as $row) {
+                                createRow($row);
+                            }
+
+                            // number_format solution adopted from PHP docs: https://www.php.net/manual/en/function.number-format.php
+                            function createRow($row) {
+                                echo '<tr>';
+                                echo '<td>'.$row['date'].'</td>';
+                                echo '<td>$'.number_format($row['open'], 2).'</td>';
+                                echo '<td>$'.number_format($row['high'], 2).'</td>';
+                                echo '<td>$'.number_format($row['low'], 2).'</td>';
+                                echo '<td>$'.number_format($row['close'], 2).'</td>';
+                                echo '<td>$'.number_format($row['volume'], 2).'</td>';
+                                echo '</tr>';
+                            }
+                        ?>
                     </tbody>
                 </table>
             </div>
