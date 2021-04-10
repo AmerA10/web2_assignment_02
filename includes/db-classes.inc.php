@@ -20,7 +20,15 @@ class CompanyDB {
 } 
 
 class HistoryDB {
+    public function __construct($connection) {
+        $this->pdo = $connection;
+    }
 
+    public function getAllForCompany($symbol, $orderBy) {
+        $sql = self::$baseSQL . "WHERE symbol='$symbol' ORDER BY $orderBy";
+        $statement = DatabaseHelper::runQuery($this->pdo, $sql, null);
+        return $statement->fetchAll();
+    }
 }
 
 class PortfolioDB {
