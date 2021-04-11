@@ -16,14 +16,14 @@ fetch(companyAPI)
     })
     .catch( error => console.log('found a ${error}') );
 
-/* Adds each company either from local storage or API to a list, also adding
-event delegation to the list of company (refer to displayInformation) */
+/* Adds each company either from an API to a list, also adding
+event delegation to the list of company */
 function populateCompanyList(companies) {
     companies.forEach( company => {
         let symbol  =company.symbol;
         symbol = symbol.toLowerCase();
         let li = document.createElement('li');
-        li.innerHTML = `<div class='list-item-section1'><img src="logos/${company.symbol}.svg" style="width:60px;height:60px"></div>` 
+        li.innerHTML = `<div class='list-item-section1'><img src="logos/${company.symbol}.svg" style="width:80px;height:80px"></div>` 
         + `<div class='list-item-section2'><a href='single-company.php?symbol=${symbol}'>${company.symbol}</a></div>`
         + `<div class='list-item-section3'><a href='single-company.php?symbol=${symbol}'>${company.name}</a></div>`;
         companyList.appendChild(li);
