@@ -15,7 +15,7 @@ try {
     $historyGateway = new HistoryDB($connection);
     
     //grab the session userId from here yk
-    $portfolio = $portGateway->getAllForUserPortfolio($defID);
+    $portfolio = $portGateway->getAllForUserPortfolio();
 
     $closeAmt = 0;
     $valueAmt = 0;
