@@ -4,8 +4,8 @@
 //Initially lets pretend that the user ID is equal to 2
 include 'includes/db-classes.inc.php';
 include 'includes/helpers.inc.php';
-include 'includes/stock-config.inc.php';//
-include 'includes/config.inc.php';
+include 'includes/stock-config.inc.php';
+//include 'includes/config.inc.php';
 $defID = 2;
 //ok first lets make a connection to the database
 try {
