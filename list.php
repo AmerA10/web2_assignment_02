@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,9 +9,22 @@
     <link rel="stylesheet" href="css/list.css">
 </head>
 <body>
-<?php
-        include_once 'header.php'
-    ?>
+        <header class="navbar">
+            <div class="currentPage">
+                <a href="list.php">Companies</a>
+                <i class="fa fa-bars menuIcon"></i>
+            </div>
+            
+            <div class="pageLinks">
+                <a href="index.php">Home</a>
+                <a href="about.php">About</a>
+                <a href="list.php">Companies</a>
+                <a href="portfolio.php">Portfolio</a>
+                <a href="profile.php">Profile</a>
+                <a href="favorites.php">Favorites</a>
+                <a href="logout.php">Logout</a>
+            </div>
+        </header>
         <form>
             <div>
                 <legend>Filter:</legend>
@@ -40,10 +50,12 @@
                     <div class="sk-circle12 sk-child"></div>
                 </div>
                     <ul id="companylist">
+                   
                     </ul>
                 </nav>
             </form>
     </body>
     <script src="js/main.js"></script>
     <script src="js/list-js.js"></script>
+
 </html>

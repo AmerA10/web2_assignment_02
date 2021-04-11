@@ -1,3 +1,4 @@
+
 <?php
 
 ?>
@@ -11,9 +12,28 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<?php
-        include_once 'header.php'
-    ?>
+header class="navbar">
+            <div class="currentPage">
+                <a href="favorites.php">Favourites</a>
+                <i class="fa fa-bars menuIcon"></i>
+            </div>
+            
+            <div class="pageLinks">
+                <a href="index.php">Home</a>
+                <a href="about.php">About</a>
+                <a href="list.php">Companies</a>
+                <a href="portfolio.php">Portfolio</a>
+                <a href="profile.php">Profile</a>
+                <a href="favorites.php">Favorites</a>
+                <a href="logout.php">Logout</a>
+            </div>
+        </header>
+        <div>
+            <!-- example code 
+            creating a table with php using the $_GET for session array
+
+            -->
+        <div>
     </body>
     <script src="js/main.js"></script>
 </html>
