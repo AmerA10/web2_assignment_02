@@ -48,7 +48,7 @@ class HistoryDB {
 }
 
 class PortfolioDB {
-    private static $baseSQL = "SELECT * FROM Portfolio"; 
+    private static $baseSQL = "SELECT * FROM portfolio"; 
     public function __construct($connection) { 
         
         $this->pdo = $connection; 

@@ -20,18 +20,20 @@ try {
     $closeAmt = 0;
     $valueAmt = 0;
     $totalAmt = 0;
-    print_r($portfolio);
+    //print_r($portfolio);
+    $portfolio->getAllForUserPortfolio(2);
+    print_r(    $portfolio->getAllForUserPortfolio(2));
     //next step is to get every symbol and every amount 
     echo '</br>';
-    foreach($portfolio as $port) { //this gives access to every image logo for the dumbass companies
-        echo '-------------------- </br>';
-        echo 'Symbol:  ' . $port['symbol'] . '-  Amount:  ' . $port['amount'];
-        $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
-        echo (' - Close: ' . $companyHistoryDate[0]['close'] );
-        echo (' - value ' . $companyHistoryDate[0]['close'] * $port['amount'] . '</br>');
-        //because the order by is desc, the date at the [0] position is the latest
-        echo '-------------------- </br>';
-    }
+    // foreach($portfolio as $port) { //this gives access to every image logo for the dumbass companies
+    //     echo '-------------------- </br>';
+    //     echo 'Symbol:  ' . $port['symbol'] . '-  Amount:  ' . $port['amount'];
+    //     $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
+    //     echo (' - Close: ' . $companyHistoryDate[0]['close'] );
+    //     echo (' - value ' . $companyHistoryDate[0]['close'] * $port['amount'] . '</br>');
+    //     //because the order by is desc, the date at the [0] position is the latest
+    //     echo '-------------------- </br>';
+    // }
 
 }
 catch(Exception $e) {
