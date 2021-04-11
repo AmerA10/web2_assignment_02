@@ -9,10 +9,10 @@ include 'includes/stock-config.inc.php';
 $defID = 2;
 //ok first lets make a connection to the database
 try {
-    $conn = DatabaseHelper::createConnection(array($connection));
-    $usersGateWay = new UsersDB($conn);
-    $portGateway = new PortfolioDB($conn);
-    $historyGateway = new HistoryDB($conn);
+   
+    $usersGateWay = new UsersDB($connection);
+    $portGateway = new PortfolioDB($connection);
+    $historyGateway = new HistoryDB($connection);
     
     //grab the session userId from here yk
     $portfolio = $portGateway->getAllForUserPortfolio($defID);
