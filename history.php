@@ -11,22 +11,9 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-        <header class="navbar">
-            <div class="currentPage">
-                <a href="list.php">History</a>
-                <i class="fa fa-bars menuIcon"></i>
-            </div>
-            
-            <div class="pageLinks">
-                <a href="index.php">Home</a>
-                <a href="about.php">About</a>
-                <a href="list.php">Companies</a>
-                <a href="portfolio.php">Portfolio</a>
-                <a href="profile.php">Profile</a>
-                <a href="favorites.php">Favorites</a>
-                <a href="logout.php">Logout</a>
-            </div>
-        </header>
+<?php
+        include_once 'header.php'
+    ?>
     </body>
     <script src="js/main.js"></script>
 </html>

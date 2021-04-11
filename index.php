@@ -1,3 +1,4 @@
+
 <?php
 
 ?>
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
         <header class="navbar">
             <div class="currentPage">
                 <a href="index.php">more teasdassting stuff</a>
@@ -69,4 +71,5 @@
         </main>
     </body>
     <script src="js/main.js"></script>
+
 </html>
