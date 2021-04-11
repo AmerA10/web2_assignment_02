@@ -22,7 +22,7 @@ try {
     $totalAmt = 0;
     //print_r($portfolio);
    
-    print_r($portfolio->getAllForUserPortfolio());
+    print_r($portfolio);
     //next step is to get every symbol and every amount 
     echo '</br>';
     // foreach($portfolio as $port) { //this gives access to every image logo for the dumbass companies
