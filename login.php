@@ -1,5 +1,13 @@
 <?php
 
+include 'includes/helpers.inc.php';
+include 'includes/db-classes.inc.php';
+include 'includes/config.inc.php';
+
+$pdo = DatabaseHelper::createConnection(array(DBCONNSTRING,DBUSER,DBPASS));
+$usersGateway = new UserDB($pdo);
+$usersGateway->login();
+
 ?>
 <!DOCTYPE html>
 <html>
