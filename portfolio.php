@@ -9,7 +9,7 @@ include 'includes/stock-config.inc.php';
 $defID = 2;
 //ok first lets make a connection to the database
 try {
-    $conn = DatabaseHelper::createConnection($connection);
+    $conn = DatabaseHelper::createConnection(array($connection));
     $usersGateWay = new UsersDB($conn);
     $portGateway = new PortfolioDB($conn);
     $historyGateway = new HistoryDB($conn);
