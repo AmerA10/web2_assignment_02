@@ -1,6 +1,6 @@
 const companyAPI = 'api-companies.php';
 let companies = []; 
-const companyTable = document.querySelector('#list');
+const companyList = document.querySelector('#companylist');
 fetch(companyAPI)
     .then( response => {
         if(response.ok) 
@@ -10,35 +10,26 @@ fetch(companyAPI)
         })
     .then( data => {
         companies.push(...data);
-
-        populateCompanyTable(companies);
+        populateCompanyList(companies);
         MakeClickable();
-
     })
     .catch( error => console.log('found a ${error}') );
 
-function populateCompanyTable(companies) {
+/* Adds each company either from local storage or API to a list, also adding
+event delegation to the list of company (refer to displayInformation) */
+function populateCompanyList(companies) {
     companies.forEach( company => {
-
-        let symbol = company.symbol;
+        let symbol  =company.symbol;
         symbol = symbol.toLowerCase();
-        let tr = document.createElement('tr');
-        let tdimg = document.createElement('td');
-        //had to add this sperate for css (flexbox)
-        tdimg.className = 'logo';
-        let tdlink1 = document.createElement('td');
-        let tdlink2 = document.createElement('td');
-        tdimg.innerHTML = `<img src="logos/${company.symbol}.svg" style="width:160px;height:100px">`;
-        tr.appendChild(tdimg);
-        tdlink1.innerHTML = `<a class='link' href='single-company.php?symbol=${symbol}'>${company.symbol}</a>`;
-        tr.appendChild(tdlink1);
-        tdlink2.innerHTML = `<a class='link' href='single-company.php?symbol=${symbol}'>${company.name}</a>`;
-        tr.appendChild(tdlink2);
-        companyTable.appendChild(tr);
+        let li = document.createElement('li');
+        li.innerHTML = `<div class='list-item-section1'><img src="logos/${company.symbol}.svg" style="width:60px;height:60px"></div>` 
+        + `<div class='list-item-section2'><a href = single-company.php?symbol=${symbol}>${company.symbol}</div>`
+        + `<div class='list-item-section3'><a href = single-company.php?symbol=${symbol}>${company.name}</div>`;
+        companyList.appendChild(li);
     });
     setTimeout( () => {
         document.querySelector('.sk-circle').style.display = "none";
-        document.querySelector('#table_wrapper').style.display = "block";
+        companyList.style.display = "inline-block";
     }, 1000);
 }
 

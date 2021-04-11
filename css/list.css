@@ -9,53 +9,33 @@
     margin-right: 45px;
 }
 
-#table_wrapper {
+#companylist {
+    height: 700px;
+    width: 96%;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-bottom: 0px;
     display: none;
-    position:relative;
 }
 
-#companytable {
-  height:1000px;
-  overflow:auto;  
-  margin-top:20px;
+/* classes made in the list-js.js populateCompanyList function. these serve to seperate the
+three items in the list (can change easily) */
+.list-item-section1 {
+    padding-left: 50px;
+    display: inline-block;
+}
+.list-item-section2 {
+    padding-left: 150px;
+    display: inline-block;
+}
+.list-item-section3 {
+    padding-left: 150px;
+    display: inline-block;
 }
 
-#table_wrapper table {
-  width:100%;
-
-}
-
-#table_wrapper table * {
-  background: rgb(64, 124, 255);;
-  color:white;
-}
-
-td, th {
-  border: 2px black solid;
-}
-
-.title {
-  font-size: 32pt;
-  text-decoration: underline;
-}
-
-th {
-  position: sticky;
-  top: 0;
-}
-
-a:link.link {
-  font-size: 20pt;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#companylist li { 
+  font-size: 1.7em; 
+  list-style: none;
 }
 
 /* loading animation css taken from https://tobiasahlin.com/spinkit/ */
