@@ -17,28 +17,55 @@
                 <i class="fa fa-bars menuIcon"></i>
             </div>
             
-            <div class="pageLinks">
-                <?php
-                    if(isset($_session["loggedin"])) {
-                ?>
-                <a href="about.php">About</a>
-                <a href="list.php">Companies</a>
-                <a href="portfolio.php">Portfolio</a>
-                <a href="favorites.php">Favorites</a>
-                <a href="profile.php">Profile</a>
-                <a href="logout.php">Logout</a>
-                <?php
-                    } else {
-                ?>
-                <a href="about.php">About</a>
-                <a href="list.php">Companies</a>
-                <a href="login.php">Login</a>
-                <a href="signup.php">Sign Up</a>
-                <?php 
-                    }
-                ?>
-            </div>
+            <nav class="pageLinks">
+                <ul>
+                    <?php
+                        if(isset($_session["loggedin"])) {
+                    ?>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="list.php">Companies</a></li>
+                    <li><a href="portfolio.php">Portfolio</a></li>
+                    <li><a href="favorites.php">Favorites</a></li>
+                    <li><a href="profile.php">Profile</a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                    <?php
+                        } else {
+                    ?>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="list.php">Companies</a></li>
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="signup.php">Sign Up</a></li>
+                    <?php 
+                        }
+                    ?>
+                </ul>
+            </nav>
         </header>
+        <main>
+            <div>
+                <ul class="mainLinks">
+                    <?php
+                        if(isset($_session["loggedin"])) {
+                    ?>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="list.php">Companies</a></li>
+                    <li><a href="portfolio.php">Portfolio</a></li>
+                    <li><a href="favorites.php">Favorites</a></li>
+                    <li><a href="profile.php">Profile</a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                    <?php
+                        } else {
+                    ?>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="list.php">Companies</a></li>
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="signup.php">Sign Up</a></li>
+                    <?php 
+                        }
+                    ?>
+                </ul>
+            </div>
+        </main>
     </body>
     <script src="js/main.js"></script>
 </html>
