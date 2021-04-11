@@ -1,4 +1,5 @@
 <?php
+
 class CompanyDB { 
     private static $baseSQL = "SELECT * FROM Companies"; 
     
@@ -13,6 +14,7 @@ class CompanyDB {
     } 
 
     public function getAllForCompany($symbol) { 
+ 
         $symbol = strtolower($symbol);
         $sql = self::$baseSQL . " WHERE symbol=?"; 
         $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array($symbol)); 
