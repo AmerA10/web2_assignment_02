@@ -1,5 +1,4 @@
-const companyAPI = 'stock-api.php';
-
+const companyAPI = 'api-companies.php';
 let companies = []; 
 const companyTable = document.querySelector('#list');
 fetch(companyAPI)
@@ -11,12 +10,16 @@ fetch(companyAPI)
         })
     .then( data => {
         companies.push(...data);
+
         populateCompanyTable(companies);
+        MakeClickable();
+
     })
     .catch( error => console.log('found a ${error}') );
 
 function populateCompanyTable(companies) {
     companies.forEach( company => {
+
         let symbol = company.symbol;
         symbol = symbol.toLowerCase();
         let tr = document.createElement('tr');
@@ -37,4 +40,20 @@ function populateCompanyTable(companies) {
         document.querySelector('.sk-circle').style.display = "none";
         document.querySelector('#table_wrapper').style.display = "block";
     }, 1000);
+}
+
+function MakeClickable() {
+   
+  let list = companyList.querySelectorAll('li');
+    for(company of list){
+        let symbol = company.querySelector('.list-item-section3');
+        let name = company.querySelector('.list-item-section2');
+        symbol.addEventListener('click', (e)=> {
+            console.log("you clicked text" + e.target.innerHTML);           
+        });
+        name.addEventListener('click', (e)=> {
+            //todo get symbol from the name           
+        });
+        
+    };
 }
