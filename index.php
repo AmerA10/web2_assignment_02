@@ -18,12 +18,25 @@
             </div>
             
             <div class="pageLinks">
+                <?php
+                    if(isset($_session["loggedin"])) {
+                ?>
                 <a href="about.php">About</a>
                 <a href="list.php">Companies</a>
                 <a href="portfolio.php">Portfolio</a>
-                <a href="profile.php">Profile</a>
                 <a href="favorites.php">Favorites</a>
+                <a href="profile.php">Profile</a>
                 <a href="logout.php">Logout</a>
+                <?php
+                    } else {
+                ?>
+                <a href="about.php">About</a>
+                <a href="list.php">Companies</a>
+                <a href="login.php">Login</a>
+                <a href="signup.php">Sign Up</a>
+                <?php 
+                    }
+                ?>
             </div>
         </header>
     </body>
