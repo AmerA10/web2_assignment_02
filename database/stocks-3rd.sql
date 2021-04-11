@@ -2,9 +2,8 @@
 -- Data import script for stocks (3rd edition) database
 --
 
-DROP DATABASE IF EXISTS `stocks`;
-CREATE DATABASE IF NOT EXISTS `stocks`;
-USE `stocks`;
+
+USE `clz0x0pl2elccpx8`;
 
 --
 -- Table structure for table `companies`
