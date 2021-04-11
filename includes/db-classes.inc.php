@@ -18,6 +18,11 @@ class CompanyDB {
         $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array($symbol)); 
         return $statement->fetchAll(); 
     } 
+    public function getCompanyName($symbol) {
+        $symbol = strtolower($symbol);
+        $sql = "SELECT name From Companies WHERE symbol=?";
+        $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array($symbol));
+    }
 }
 
 class HistoryDB {
@@ -31,6 +36,13 @@ class HistoryDB {
         $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array($symbol)); 
         return $statement->fetchAll(); 
     } 
+    public function getDateForHistory($symbol) {
+        $sql = "SELECT date, close FROM History WHERE symbol=? ORDER BY date desc ";
+        $symbol = strtolower($symbol);
+   
+        $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array($symbol)); 
+        return $statement->fetchAll(); 
+    }
     
 
 }
@@ -40,6 +52,13 @@ class PortfolioDB {
     public function __construct($connection) { 
         
         $this->pdo = $connection; 
+    }
+    public function getAllForUserPortfolio($id) {
+        $id = strtolower($id);
+       $sql = "SELECT portfolio.userId, portfolio.amount, portfolio.symbol 
+       FROM portfolio LEFT JOIN users On portfolio.userId = users.id WHERE portfolio.userId=?";
+       $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array($id));
+       return $statement->fetchAll();
     }
     public function getAllForPortfolio($symbol) { 
         $symbol = strtolower($symbol);

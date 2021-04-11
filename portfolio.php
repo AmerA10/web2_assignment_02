@@ -1,4 +1,44 @@
 <?php
+//at some point here check the session shit in order to determine the actual user ID
+//Until Then just get it done with a default ID
+//Initially lets pretend that the user ID is equal to 2
+include 'includes/db-classes.inc.php';
+include 'includes/helpers.inc.php';
+include 'includes/stock-config.inc.php';//
+include 'includes/config.inc.php';
+$defID = 2;
+//ok first lets make a connection to the database
+try {
+    $conn = DatabaseHelper::createConnection($connection);
+    $usersGateWay = new UsersDB($conn);
+    $portGateway = new PortfolioDB($conn);
+    $historyGateway = new HistoryDB($conn);
+    
+    //grab the session userId from here yk
+    $portfolio = $portGateway->getAllForUserPortfolio($defID);
+
+    $closeAmt = 0;
+    $valueAmt = 0;
+    $totalAmt = 0;
+    print_r($portfolio);
+    //next step is to get every symbol and every amount 
+    echo '</br>';
+    foreach($portfolio as $port) { //this gives access to every image logo for the dumbass companies
+        echo '-------------------- </br>';
+        echo 'Symbol:  ' . $port['symbol'] . '-  Amount:  ' . $port['amount'];
+        $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
+        echo (' - Close: ' . $companyHistoryDate[0]['close'] );
+        echo (' - value ' . $companyHistoryDate[0]['close'] * $port['amount'] . '</br>');
+        //because the order by is desc, the date at the [0] position is the latest
+        echo '-------------------- </br>';
+    }
+
+}
+catch(Exception $e) {
+    die($e->getMessage());
+}
+
+
 
 ?>
 <!DOCTYPE html>
