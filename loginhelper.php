@@ -3,13 +3,10 @@
 include 'includes/helpers.inc.php';
 include 'includes/db-classes.inc.php';
 include 'includes/config.inc.php';
-// include 'includes/login.inc.php';
-
-
-
 
 $pdo = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS));
-$usersGateway = new UsersDB($pdo);
+//$usersGateway = new UsersDB($pdo);
+
 //check query string print login failled
 if (loginCheck($pdo)){         
     header("location: index.php");
@@ -33,6 +30,9 @@ function loginCheck($pdo){
        if(isset($_POST['password'])){
            $userPwd = $_POST['password'];
            if(password_verify($userPwd, $statement[0]['password'])){
+                
+            session_start();
+
             return true;
         }
     } 
