@@ -7,9 +7,11 @@
     $favorites = $_SESSION['fav'];
     echo $_GET['entry'];
     if ($_GET['entry'] != 'all') {
-        array_splice($favorites[0], $_GET['entry'], 1);
+        unset($favorites[$_GET['entry']]);
         print_r($favorites);
-        $_SESSION["fav"] = $favorites;
+        $_SESSION["fav"] = array_filter($favorites);
+    } else {
+        $_SESSION["fav"] = [];
     }
-    //header("location: favorites.php");
+    header("location: favorites.php");
 ?>
