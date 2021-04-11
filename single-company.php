@@ -8,12 +8,11 @@ try {
 
     if(isset($_GET['symbol'])) {
         $symbol = $_GET['symbol'];
-        $company = $gateway->getAllForCompany($symbol)[0];
-    
+        $company = $gateway->getAllForCompany($symbol)[0];    
     }
+
     else  {
-        $symbol = "Not exist";
-        
+        $symbol = "Not exist";        
     }
 
 }
@@ -56,13 +55,22 @@ catch(Exception $e){
      
         </h1>
         <ul id="companylist">
-        <?php 
-            
+        <?php
+
+        echo "<li><img src=logos/".$company['symbol'].'.svg></li>'; 
+        echo "<li> " . $company['symbol'] . "</li>";
+        echo '<li> ' . $company['name'] . "</li>";
+        echo "<li> " . $company["sector"] . "</li>";
+        echo "<li> " . $company["subindustry"] . "</li>";
+        echo "<li> " . $company['address'] . "</li>";
+        echo "<li> " . $company['exchange'] . "</li>";
+        echo "<li> " . $company['website'] . "</li>";
+        echo "<li> " . $company['description'] . "</li>";
+
         ?>
         </ul>
 
     </body>
     <script src="js/main.js"></script>
-   
-    
+
 </html>
