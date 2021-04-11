@@ -93,6 +93,12 @@ class UsersDB {
         $sql = self::$baseSQL . " WHERE symbol=?"; 
         $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array($symbol)); 
         return $statement->fetchAll(); 
+    }
+    public function getAllUserStuff() {
+    
+        $sql = "SELECT * FROM Users";
+        $statement = DatabaseHelper::runQuery($this->pdo, $sql, null); 
+        return $statement->fetchAll(); 
     } 
 
 }

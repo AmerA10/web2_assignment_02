@@ -13,16 +13,16 @@ try {
     $usersGateWay = new UsersDB($connection);
     $portGateway = new PortfolioDB($connection);
     $historyGateway = new HistoryDB($connection);
-    
+    $userStuff = $usersGateWay->getAllUserStuff();
     //grab the session userId from here yk
-    $portfolio = $portGateway->getAllForUserPortfolio();
+
 
     $closeAmt = 0;
     $valueAmt = 0;
     $totalAmt = 0;
     //print_r($portfolio);
    
-    print_r($portfolio);
+    print_r($userStuff);
     //next step is to get every symbol and every amount 
     echo '</br>';
     // foreach($portfolio as $port) { //this gives access to every image logo for the dumbass companies
