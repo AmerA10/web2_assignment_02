@@ -29,6 +29,12 @@ body {
     font-size: 16pt;
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 .pageLinks a:hover {
     background-color: rgb(93, 101, 119);
 }
@@ -46,4 +52,28 @@ body {
 
 .menuIcon:hover {
     cursor: pointer;
+}
+
+.mainLinks {
+    margin: 32px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 32px;
+    column-gap: 32px;
+    text-align: center;
+    font-size: 42px;
+    line-height: 1.5em;
+}
+.mainLinks a:visited {
+    color: #941452;
+}
+.mainLinks li {
+    width: 100%;
+    padding: 100px;
+    background-color: #ddd;
+}
+.mainLinks a {
+    color: #47a;
+    padding: 12px;
 }
