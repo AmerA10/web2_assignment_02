@@ -1,6 +1,4 @@
-<?php
 
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,6 +51,7 @@
                     <div class="sk-circle12 sk-child"></div>
                 </div>
                     <ul id="companylist">
+                   
                     </ul>
                 </nav>
             </form>
