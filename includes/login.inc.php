@@ -2,7 +2,7 @@
 
 include 'helpers.inc.php';
 include 'db-classes.inc.php';
-include 'config.inc.php';
+include 'stock-config.inc.php';
 
 
 $pdo = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS));
