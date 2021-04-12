@@ -23,8 +23,10 @@ if (loginCheck($usersGateway)){
 //check if email is left empty
 function loginCheck($usersGateway){
 
-    if(!isset($_POST['email']))
+    if(!isset($_POST['email'])) {
         return false;
+    }
+       
         $userEmail = $_POST['email'];
     try{
   

@@ -16,6 +16,8 @@ try {
     if (isset($_SESSION['userId'])) {
         $userId = $_SESSION['userId'];
         $userEmail = $_SESSION['userEmail'];
+        echo $userId;
+        echo $userEmail;
         if ($usersGateWay->compareUserId($userId, $userEmail)) {
 
 
@@ -39,6 +41,7 @@ try {
                 echo '-------------------- </br>';
             }
         }
+    
     }
 } catch (Exception $e) {
 
