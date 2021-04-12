@@ -5,15 +5,18 @@ include 'includes/db-classes.inc.php';
 include 'includes/config.inc.php';
 
 $pdo = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS));
-//$usersGateway = new UsersDB($pdo);
+$usersGateway = new UsersDB($pdo);
 
 //check query string print login failled
-if (loginCheck($pdo)){         
+
+if (loginCheck($pdo)){     
+    session_start();    
+    $_SESSION[("loggedin")] = true;
     header("location: index.php");
-    exit();
+        
 }else{
     header("location: login.php?loginError=1");
-    exit();
+        
 }
 
 
