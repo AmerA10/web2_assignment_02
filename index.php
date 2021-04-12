@@ -22,7 +22,7 @@
             <nav class="pageLinks">
                 <ul>
                     <?php
-                        if(isset($_session["loggedin"])) {
+                        if(isset($_SESSION["loggedin"])) {
                     ?>
                     <li><a href="about.php">About</a></li>
                     <li><a href="list.php">Companies</a></li>
@@ -48,7 +48,7 @@
             <div>
                 <ul class="mainLinks">
                     <?php
-                        if(isset($_session["loggedin"])) {
+                        if(isset($_SESSION["loggedin"])) {
                     ?>
                     <li><a href="about.php">About</a></li>
                     <li><a href="list.php">Companies</a></li>
