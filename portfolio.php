@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 include 'includes/db-classes.inc.php';
 include 'includes/helpers.inc.php';
