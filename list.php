@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,13 +25,11 @@
                 <a href="logout.php">Logout</a>
             </div>
         </header>
-        <form>
-            <div>
-                <legend>Filter:</legend>
-                <input type="text" id="filter" placeholder="search for company" list="companylist">
-            </div><br>
-                <div>
-                    <input type="button" value="Go" class="button">
+            <form>
+                <div id='filterbox'>
+                    <label for='filter'>Filter:</label>
+                    <input type="text" id="filter" placeholder="search for company by name" list="companylist">
+                    <input type="reset" value="Reset" class="reset">
                 </div>
                 <nav>
                 <!-- taken from https://tobiasahlin.com/spinkit/ -->
@@ -52,8 +47,21 @@
                     <div class="sk-circle11 sk-child"></div>
                     <div class="sk-circle12 sk-child"></div>
                 </div>
-                    <ul id="companylist">
-                    </ul>
+                <div id='table_wrapper'>
+                    <div id='companytable'>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><span class="title">Logo</span></th>
+                                    <th><span class="title">Symbol</span></th>
+                                    <th><span class="title">Name</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id='list'>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 </nav>
             </form>
     </body>
