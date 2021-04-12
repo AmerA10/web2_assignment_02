@@ -4,9 +4,9 @@ session_start();
 
 
 if(isset($_SESSION["loggedin"]) && $_SESSION['loggedin']) {
-        $_SESSION["loggedin"] = false;
+       
         if(isset($_SESSION['userId'])) {
-         session_unset($_SESSION['userId']);
+        // session_unset($_SESSION['userId']);
          echo "this page works..";
         }
 //     if(isset($_SESSION['userEmail'])) {
@@ -14,6 +14,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION['loggedin']) {
 //     }
 
 //     header("location: index.php");
+$_SESSION["loggedin"] = false;
 echo "this page works..";
 }
 // else {
