@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 //just have to switch '!'
@@ -6,4 +7,5 @@ if(isset($_SESSION["loggedin"])) {
     header("location: index.php");
     session_destroy();
 }
+
 ?>

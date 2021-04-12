@@ -1,3 +1,5 @@
+
+
 <?php
 // set error reporting on to help with debugging
 error_reporting(E_ALL);
@@ -33,3 +35,4 @@ $connection = DatabaseHelper::createConnection(array(DBCONNECTION, DBUSER, DBPAS
 
 
 ?>
+

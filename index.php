@@ -1,5 +1,7 @@
+
 <?php
     session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,6 +22,7 @@
             
             <nav class="pageLinks">
                 <ul>
+
                     <li><a href="index.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
                     <li><a href="list.php">Companies</a></li>
@@ -33,6 +36,7 @@
                         echo "<li><a href='login.php'>Login</a></li>";
                         echo "<li><a href='login.php'>signup</a></li>";
                     }
+
                     ?>
                 </ul>
             </nav>
@@ -41,6 +45,7 @@
         <main>
             <div>
                 <ul class="mainLinks">
+
                     <li><a href="index.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
                     <li><a href="list.php">Companies</a></li>
@@ -54,6 +59,7 @@
                         echo "<li><a href='login.php'>Login</a></li>";
                         echo "<li><a href='login.php'>signup</a></li>";
                     }
+
                     ?>
                 </ul>
             </div>
@@ -61,4 +67,6 @@
     </body>
     <script src="js/main.js"></script>
 
+
 </html>
+

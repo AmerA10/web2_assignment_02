@@ -1,6 +1,8 @@
+
 <?php
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,7 +38,9 @@
                 <div>
                     <input type="button" value="Go" class="button">
                 </div>
-              
+
+                <nav>
+
                 <!-- taken from https://tobiasahlin.com/spinkit/ -->
                 <div class="sk-circle">
                     <div class="sk-circle1 sk-child"></div>
@@ -53,10 +57,13 @@
                     <div class="sk-circle12 sk-child"></div>
                 </div>
                     <ul id="companylist">
+
                     </ul>
                 </nav> 
+
             </form>
     </body>
     <script src="js/main.js"></script>
     <script src="js/list-js.js"></script>
+
 </html>
