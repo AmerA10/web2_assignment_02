@@ -2,9 +2,9 @@
 
 include 'includes/helpers.inc.php';
 include 'includes/db-classes.inc.php';
-include 'includes/config.inc.php';
+include 'includes/stock-config.inc.php';
 
-$pdo = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS));
+$pdo = $connection;
 //$usersGateway = new UsersDB($pdo);
 
 //check query string print login failled

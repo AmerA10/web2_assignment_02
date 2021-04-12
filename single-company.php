@@ -23,10 +23,7 @@ catch(Exception $e){
     die($e ->getMessage());
 }
 
-        }
-     } catch (PDOException $e) {
-        die( $e->getMessage() );
-     }
+
 ?>
 
 
