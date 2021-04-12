@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-echo "this page works..";
-//just have to switch '!'
-// if(isset($_SESSION["loggedin"]) && $_SESSION['loggedin']) {
+
+
+if(isset($_SESSION["loggedin"]) && $_SESSION['loggedin']) {
 //     $_SESSION["loggedin"] = false;
 //     if(isset($_SESSION['userId'])) {
 //         session_unset($_SESSION['userId']);
@@ -13,8 +13,8 @@ echo "this page works..";
 //     }
 
 //     header("location: index.php");
-
-// }
+echo "this page works..";
+}
 // else {
 //     header("location: index.php");
 // }
