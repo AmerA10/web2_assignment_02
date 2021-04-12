@@ -25,6 +25,7 @@ try {
 
 
             $userStuff = $usersGateWay->getAllForUser($userId);
+            $portfolio = $portGateway->getAllForUserPortfolio($userId);
             $closeAmt = 0;
             $valueAmt = 0;
             $totalAmt = 0;
