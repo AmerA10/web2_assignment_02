@@ -5,12 +5,12 @@ include 'db-classes.inc.php';
 include 'stock-config.inc.php';
 
 
-$pdo = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS));
-$usersGateway = new UsersDB($pdo);
+
+$usersGateway = new UsersDB($connection);
 
 //check query string print login failled
 
-if (loginCheck($pdo)){     
+if (loginCheck($usersGateway)){     
     session_start();    
     $_SESSION[("loggedin")] = true;
     header("location: ..\index.php");
@@ -21,14 +21,15 @@ if (loginCheck($pdo)){
 }
 
 //check if email is left empty
-function loginCheck($pdo){
+function loginCheck($usersGateway){
 
     if(!isset($_POST['email']))
         return false;
+        $userEmail = $_POST['email'];
     try{
-        $sql = "SELECT email, password FROM users WHERE email=?";
-        $statement = DatabaseHelper::runQuery($pdo, $sql, Array(($_POST['email'])));
-        $statement = $statement-> fetchAll(); 
+  
+        $statement = $usersGateway->getUserEmail($userEmail);
+         
     
        if(isset($_POST['password'])){
            $userPwd = $_POST['password'];

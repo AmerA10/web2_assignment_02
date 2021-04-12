@@ -118,6 +118,12 @@ class UsersDB {
 
     } 
 
+    public function getUserEmail($email) {
+        $sql = "SELECT email, password FROM users WHERE email=?";
+        $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array(($email)));
+        return $statement->fetchAll(); 
+    }
+
 }
 
 ?>
