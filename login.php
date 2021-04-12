@@ -2,7 +2,15 @@
   include 'includes/helpers.inc.php';
   include 'includes/db-classes.inc.php';
   include 'includes/config.inc.php';
+
+  session_start();
+
+  if (isset($_SESSION[("loggedin")])){
+    header("location: index.php");
+}
+
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -47,8 +55,7 @@
      </tr>
      <tr>
       <td>
-         <input type="submit" name="submitBtnLogin" id="submitBtnLogin" value="Login" />
-         
+         <input type="submit" name="submitBtnLogin" id="submitBtnLogin" value="Login">
       </td>
      </tr>
   </table>
