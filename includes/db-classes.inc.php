@@ -104,10 +104,10 @@ class UsersDB {
     public function __construct($connection) { 
         $this->pdo = $connection; 
     }
-    public function getAllForUser($symbol) { 
-        $symbol = strtolower($symbol);
-        $sql = self::$baseSQL . " WHERE symbol=?"; 
-        $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array($symbol)); 
+    public function getAllForUser($id) { 
+      
+        $sql = self::$baseSQL . " WHERE id=?"; 
+        $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array($id)); 
         return $statement->fetchAll(); 
     }
     public function getAllUserStuff() {

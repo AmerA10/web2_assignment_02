@@ -19,7 +19,7 @@ try {
         if ($usersGateWay->compareUserId($userId, $userEmail)) {
 
 
-            $userStuff = $usersGateWay->getAllUserStuff();
+            $userStuff = $usersGateWay->getAllForUser($userId);
             $closeAmt = 0;
             $valueAmt = 0;
             $totalAmt = 0;
