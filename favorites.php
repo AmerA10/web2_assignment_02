@@ -1,3 +1,4 @@
+
 <?php
 
 ?>
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-        <header class="navbar">
+header class="navbar">
             <div class="currentPage">
                 <a href="favorites.php">Favourites</a>
                 <i class="fa fa-bars menuIcon"></i>
@@ -27,6 +28,12 @@
                 <a href="logout.php">Logout</a>
             </div>
         </header>
+        <div>
+            <!-- example code 
+            creating a table with php using the $_GET for session array
+
+            -->
+        <div>
     </body>
     <script src="js/main.js"></script>
 </html>

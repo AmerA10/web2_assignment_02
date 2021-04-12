@@ -13,8 +13,12 @@ class CompanyDB {
     } 
 
     public function getAllForCompany($symbol) { 
-        $sql = self::$baseSQL . " WHERE symbol='$symbol'"; 
-        $statement = DatabaseHelper::runQuery($this->pdo, $sql, null); 
+
+ 
+        $symbol = strtolower($symbol);
+        $sql = self::$baseSQL . " WHERE symbol=?"; 
+        $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array($symbol)); 
+
         return $statement->fetchAll(); 
     } 
 } 
@@ -41,7 +45,19 @@ class stocksDB {
 }
 
 class UsersDB {
+    private static $baseSQL = "SELECT * FROM Users"; 
+    
+    public function __construct($connection) { 
+        $this->pdo = $connection; 
+    } 
 
+    public function login() {
+        $sql = self::$baseSQL . "where email = :email and password = :password"; 
+        $statement = $pdo->prepare($sql);
+        $statement->bindValue(":email", $POST["email"]);
+        $statement->bindValue(":password", $_POST["password"]);
+        $result = $statement->excute();
+    } 
 }
 
 ?>

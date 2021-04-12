@@ -1,5 +1,5 @@
 <?php
-
+    //will use the portfolio table to populate a table, using the primary key of user/secondary key of portfolio
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,4 +29,5 @@
         </header>
     </body>
     <script src="js/main.js"></script>
+
 </html>
