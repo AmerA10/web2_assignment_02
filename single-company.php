@@ -23,10 +23,7 @@ catch(Exception $e){
     die($e ->getMessage());
 }
 
-        }
-     } catch (PDOException $e) {
-        die( $e->getMessage() );
-     }
+
 ?>
 
 
@@ -82,16 +79,16 @@ catch(Exception $e){
             <br/>
             <div class="buttonContainer">
 
+
                
                 <a href='history.php?symbol=<?=$company['symbol']?>&sort=date'>History</a>
            
 
                 <a href="addtofav.php?symbol=<?=$company['symbol']?>" class="favoritesButton">Add to Favorites</button>
              
+
             </div>
         </div>
-
-
 
 
         <h1>

@@ -1,4 +1,5 @@
 
+
 <?php 
   include 'includes/helpers.inc.php';
   include 'includes/db-classes.inc.php';
@@ -13,8 +14,10 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
+
         <header class="navbar">
             <div class="currentPage">
                 <a href="login.php">Login</a>
@@ -31,6 +34,7 @@
             </div>
         </header>
     
+
     <form method="post" action= "loginhelper.php">
   <table class="loginTable">
      <tr>
@@ -49,11 +53,14 @@
      <tr>
       <td>
          <input type="submit" name="submitBtnLogin" id="submitBtnLogin" value="Login" />
-         
+
+         <span class="loginMsg"><?php echo @$msg;?></span>
+
       </td>
      </tr>
   </table>
 </form>
+
 
     </body>
 

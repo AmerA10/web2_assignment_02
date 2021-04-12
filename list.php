@@ -49,9 +49,22 @@
                     <div class="sk-circle11 sk-child"></div>
                     <div class="sk-circle12 sk-child"></div>
                 </div>
-                    <ul id="companylist">
-                   
-                    </ul>
+                <div id='table_wrapper'>
+                    <div id='companytable'>
+                        <table width='100%'>
+                            <thead>
+                                <tr>
+                                    <th><span class="title">Logo</span></th>
+                                    <th><span class="title">Symbol</span></th>
+                                    <th><span class="title">Name</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id='list'>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 </nav>
             </form>
     </body>
