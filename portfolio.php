@@ -11,7 +11,10 @@ $portGateway = new PortfolioDB($connection);
 $historyGateway = new HistoryDB($connection);
 
 try {
-
+    $userId = $_SESSION['userId'];
+    $userEmail = $_SESSION['userEmail'];
+    echo $userId;
+    echo $userEmail;
 
     if (isset($_SESSION['userId'])) {
         $userId = $_SESSION['userId'];
