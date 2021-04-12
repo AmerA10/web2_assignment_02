@@ -41,16 +41,6 @@
     border-radius: 8px;
 
 }
-button {
-    color: white;
-    background-color: rgb(64, 124, 255);
-    border: none;
-    border-radius: 8px;
-    padding: 10px;
-    width: 200px;
-
-
-}
 
 button:hover {
     cursor: pointer;
