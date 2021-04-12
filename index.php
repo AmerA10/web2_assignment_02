@@ -1,5 +1,5 @@
-
 <?php
+    session_start();
 
 ?>
 <!DOCTYPE html>
@@ -21,24 +21,21 @@
             
             <nav class="pageLinks">
                 <ul>
-                    <?php
-                        if(isset($_SESSION["loggedin"])) {
-                    ?>
+
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
                     <li><a href="list.php">Companies</a></li>
-                    <li><a href="portfolio.php">Portfolio</a></li>
-                    <li><a href="favorites.php">Favorites</a></li>
-                    <li><a href="profile.php">Profile</a></li>
-                    <li><a href="logout.php">Logout</a></li>
                     <?php
-                        } else {
-                    ?>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="list.php">Companies</a></li>
-                    <li><a href="login.php">Login</a></li>
-                    <li><a href="signup.php">Sign Up</a></li>
-                    <?php 
-                        }
+                    if (isset($_SESSION[("loggedin")])) {
+                        echo "<li><a href='portfolio.php'>Portfolio</a></li>";
+                        echo "<li><a href='profile.php'>Profile</a></li>";
+                        echo "<li><a href='favorites.php'>Favorites</a></li>";
+                        echo "<li><a href='logout.php'>Logout</a></li>";
+                    }else{
+                        echo "<li><a href='login.php'>Login</a></li>";
+                        echo "<li><a href='login.php'>signup</a></li>";
+                    }
+
                     ?>
                 </ul>
             </nav>
@@ -47,29 +44,27 @@
         <main>
             <div>
                 <ul class="mainLinks">
-                    <?php
-                        if(isset($_SESSION["loggedin"])) {
-                    ?>
+
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
                     <li><a href="list.php">Companies</a></li>
-                    <li><a href="portfolio.php">Portfolio</a></li>
-                    <li><a href="favorites.php">Favorites</a></li>
-                    <li><a href="profile.php">Profile</a></li>
-                    <li><a href="logout.php">Logout</a></li>
                     <?php
-                        } else {
-                    ?>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="list.php">Companies</a></li>
-                    <li><a href="login.php">Login</a></li>
-                    <li><a href="signup.php">Sign Up</a></li>
-                    <?php 
-                        }
+                    if (isset($_SESSION[("loggedin")])) {
+                        echo "<li><a href='portfolio.php'>Portfolio</a></li>";
+                        echo "<li><a href='profile.php'>Profile</a></li>";
+                        echo "<li><a href='favorites.php'>Favorites</a></li>";
+                        echo "<li><a href='logout.php'>Logout</a></li>";
+                    }else{
+                        echo "<li><a href='login.php'>Login</a></li>";
+                        echo "<li><a href='login.php'>signup</a></li>";
+                    }
+
                     ?>
                 </ul>
             </div>
         </main>
     </body>
     <script src="js/main.js"></script>
+
 
 </html>
