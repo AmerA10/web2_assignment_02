@@ -73,7 +73,7 @@ class PortfolioDB {
       $sql = "SELECT portfolio.userId, portfolio.amount, portfolio.symbol 
       FROM portfolio LEFT JOIN users On portfolio.userId = users.id WHERE portfolio.userId=?";
        $sql = "SELECT * from portfolio";
-       $statement = DatabaseHelper::runQuery($this->pdo, $sql, null);
+       $statement = DatabaseHelper::runQuery($this->pdo, $sql, array($id));
        return $statement->fetchAll();
     }
     public function getAllForPortfolio($symbol) { 

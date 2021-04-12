@@ -13,8 +13,6 @@ if (isset($_SESSION["loggedin"]) && $_SESSION['loggedin']) {
         unset($_SESSION['userEmail']);
         
     }
-
-  
     $_SESSION["loggedin"] = false;
     header("location: index.php");
 } else {
