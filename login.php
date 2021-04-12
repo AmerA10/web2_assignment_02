@@ -2,7 +2,7 @@
 <?php 
   include 'includes/helpers.inc.php';
   include 'includes/db-classes.inc.php';
-  include 'includes/config.inc.php';
+  include 'includes/stock-config.inc.php';
 ?>
 
 <!DOCTYPE html>
