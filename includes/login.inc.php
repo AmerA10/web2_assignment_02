@@ -1,5 +1,5 @@
 <?php
-
+  session_start();    
 include 'helpers.inc.php';
 include 'db-classes.inc.php';
 include 'stock-config.inc.php';
@@ -11,7 +11,7 @@ $usersGateway = new UsersDB($connection);
 //check query string print login failled
 
 if (loginCheck($usersGateway)){     
-    session_start();    
+  
     $_SESSION[("loggedin")] = true;
     header("location: ..\index.php");
     exit();
@@ -28,12 +28,14 @@ function loginCheck($usersGateway){
         $userEmail = $_POST['email'];
     try{
   
-        $statement = $usersGateway->getUserEmail($userEmail);
+        $statement = $usersGateway->getUserData($userEmail);
          
     
        if(isset($_POST['password'])){
            $userPwd = $_POST['password'];
            if(password_verify($userPwd, $statement[0]['password'])){
+            $_SESSION['userId'] = $statement[0]['id'];
+            $_SESSION['userEmail'] = $statement[0]['email'];
                 
             return true;
         }

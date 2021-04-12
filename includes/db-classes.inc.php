@@ -118,10 +118,22 @@ class UsersDB {
 
     } 
 
-    public function getUserEmail($email) {
-        $sql = "SELECT email, password FROM users WHERE email=?";
+    public function getUserData($email) {
+        $sql = "SELECT email, id password FROM users WHERE email=?";
         $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array(($email)));
         return $statement->fetchAll(); 
+    }
+
+    public function compareUserId($id, $email) {
+        $sql = "SELECT id FROM users WHERE email=?";
+        $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array(($email)));
+        if($statement[0]['id'] == $id) {
+            return true;
+        }
+        else {
+            return false;
+        }
+        
     }
 
 }
