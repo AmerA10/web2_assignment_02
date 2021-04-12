@@ -1,3 +1,4 @@
+
 <?php 
 require_once 'includes/db-classes.inc.php';
 require_once 'includes/helpers.inc.php'; 
@@ -20,6 +21,7 @@ try {
 catch(Exception $e){
     die($e ->getMessage());
 }
+
 ?>
 
 
@@ -32,6 +34,7 @@ catch(Exception $e){
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/single-company.css">
 </head>
 <body>
         <header class="navbar">
@@ -39,7 +42,6 @@ catch(Exception $e){
                 <a href="list.php">Company</a>
                 <i class="fa fa-bars menuIcon"></i>
             </div>
-            
             <div class="pageLinks">
                 <a href="index.php">Home</a>
                 <a href="about.php">About</a>
@@ -51,6 +53,36 @@ catch(Exception $e){
             </div>
         </header>
 
+
+        <div id="companyInfo" class="fadeIn defaultView">
+            <span id="companyInfoHeader">
+                <img src='logos/<?=$company['symbol']?>.svg' class="logo">
+                <h2 class="name"><?=$company['name']?></h2>
+                <h2 class="symbol"><?=$company['symbol']?></h2>
+            </span>
+            <hr>
+            <p class="description"><?=$company['description']?></p>
+            <hr>
+            <span id="companyInfoBody">
+                <div>
+                    <span class="bold">Sector: </span><?=$company['sector']?><br>
+                    <span class="bold">Subindustry: </span><?=$company['subindustry']?><br>
+                    <span class="bold">Exchange: </span><?=$company['exchange']?>
+                </div>
+                <div>
+                    <span class="bold">Location: </span><?=$company['address']?><br>
+                    <a href="" id="companyURL"></a>
+                </div>
+            </span>
+            <br/>
+            <div class="buttonContainer">
+                <a href='addtofav.php?symbol=<?=$company['symbol']?>'>Add to Favorites</a>
+                <a href='history.php?symbol=<?=$company['symbol']?>&sort=date'>History</a>
+            </div>
+        </div>
+
+
+=======
         <h1>
      
         </h1>
@@ -72,5 +104,6 @@ catch(Exception $e){
 
     </body>
     <script src="js/main.js"></script>
+
 
 </html>

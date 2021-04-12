@@ -1,5 +1,4 @@
 <?php
-
 class CompanyDB { 
     private static $baseSQL = "SELECT * FROM Companies"; 
     
@@ -28,10 +27,15 @@ class CompanyDB {
 }
 
 class HistoryDB {
-    private static $baseSQL = "SELECT * FROM History"; 
-    public function __construct($connection) { 
-        $this->pdo = $connection; 
-    }
+
+
+
+    public function getAllForCompany($symbol, $sort) {
+        $sql = self::$baseSQL . " WHERE symbol='$symbol' ORDER BY $sort";
+        $statement = DatabaseHelper::runQuery($this->pdo, $sql, null);
+        return $statement->fetchAll();
+}
+
     public function getAllForHistory($symbol) { 
         $symbol = strtolower($symbol);
         $sql = self::$baseSQL . " WHERE symbol=?"; 
@@ -46,6 +50,7 @@ class HistoryDB {
         return $statement->fetchAll(); 
     }
     
+
 
 }
 

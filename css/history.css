@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+    margin: auto;
+    table-layout: fixed;
+    text-align: center;
+}
+
+tbody td {
+    border: 1px solid black;
+    font-size: 9pt;
+    padding: 2px;
+}
+
+th {
+    border-bottom: 1px solid black;
+}
+
+th a { text-decoration: none;}
