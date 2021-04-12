@@ -1,5 +1,27 @@
 
 <?php
+session_start();
+
+function createFavList() {
+    if (isset($_SESSION['fav']) && !empty($_SESSION['fav'])) {
+        $favorites = $_SESSION['fav'];
+    
+        $keys = array_keys($favorites);
+    
+        for($i = 0; $i < count($favorites); $i++) {
+            foreach ($favorites[$keys[$i]] as $array) {
+                echo '<tr>';
+                echo "<td><img src='logos/" . $array['symbol'] . ".svg' style='width:160px;height:100px'></td>";
+                echo "<td>" . $array['symbol'] . "</td>";
+                echo "<td>" . $array['name'] . "</td>";
+                echo "<td><a class='remove' href='removefavorite.php?entry=" . $i . "'>Remove</a></td>";
+                echo '</tr>';
+            }
+    
+        }
+    }
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -10,9 +32,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/favorites.css">
 </head>
 <body>
-header class="navbar">
+        <header class="navbar">
+
             <div class="currentPage">
                 <a href="favorites.php">Favourites</a>
                 <i class="fa fa-bars menuIcon"></i>
@@ -29,10 +54,12 @@ header class="navbar">
             </div>
         </header>
         <div>
-            <!-- example code 
-            creating a table with php using the $_GET for session array
 
-            -->
+            <table id="favtable">
+                <?=createFavList();?>
+            </table>
+            <a class='removeall' href='removefavorite.php?entry=all'>Remove All</a>
+
         <div>
     </body>
     <script src="js/main.js"></script>

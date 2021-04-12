@@ -1,5 +1,6 @@
 <?php
 
+
 //at some point here check the session shit in order to determine the actual user ID
 //Until Then just get it done with a default ID
 //Initially lets pretend that the user ID is equal to 2
@@ -41,6 +42,7 @@ catch(Exception $e) {
   
     die($e->getMessage());
 }
+
 
 
 
