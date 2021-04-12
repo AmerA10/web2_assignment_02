@@ -1,6 +1,10 @@
-<?php
 
+<?php 
+  include 'includes/helpers.inc.php';
+  include 'includes/db-classes.inc.php';
+  include 'includes/config.inc.php';
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +22,6 @@
             </div>
             
             <div class="pageLinks">
-                <a href="index.php">Home</a>
                 <a href="about.php">About</a>
                 <a href="list.php">Companies</a>
                 <a href="portfolio.php">Portfolio</a>
@@ -27,6 +30,39 @@
                 <a href="logout.php">Logout</a>
             </div>
         </header>
+    
+    <form method="post" action= "loginhelper.php">
+  <table class="loginTable">
+     <tr>
+      <th>LOGIN</th>
+     </tr>
+     <tr>
+      <td>
+        <label class="firstLabel">Email:</label>
+        <input type="text" name="email" id="email"/>
+      </td>
+     </tr>
+     <tr>
+      <td><label>Password:</label>
+        <input type="password" name="password" id="password"/></td>
+     </tr>
+     <tr>
+      <td>
+         <input type="submit" name="submitBtnLogin" id="submitBtnLogin" value="Login" />
+         
+      </td>
+     </tr>
+  </table>
+</form>
+
     </body>
+
+    
     <script src="js/main.js"></script>
+</html>
+
+    
+    <script src="js/main.js"></script>
+
+
 </html>
