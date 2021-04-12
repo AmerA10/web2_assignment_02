@@ -116,7 +116,14 @@ class UsersDB {
         $statement = DatabaseHelper::runQuery($this->pdo, $sql, null); 
         return $statement->fetchAll(); 
 
-    } 
+    }
+    public function login() {
+        $sql = self::$baseSQL . "where email = :email and password = :password"; 
+        $statement = $pdo->prepare($sql);
+        $statement->bindValue(":email", $POST["email"]);
+        $statement->bindValue(":password", $_POST["password"]);
+        $result = $statement->excute();
+    }
 
 
     
