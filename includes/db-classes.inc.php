@@ -119,7 +119,7 @@ class UsersDB {
     } 
 
     public function getUserData($email) {
-        $sql = "SELECT email, id password FROM users WHERE email=?";
+        $sql = "SELECT email, id, password FROM users WHERE email=?";
         $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array(($email)));
         return $statement->fetchAll(); 
     }

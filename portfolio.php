@@ -20,9 +20,6 @@ try {
 
 
             $userStuff = $usersGateWay->getAllUserStuff();
-
-
-
             $closeAmt = 0;
             $valueAmt = 0;
             $totalAmt = 0;
