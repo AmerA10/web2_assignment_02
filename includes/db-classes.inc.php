@@ -118,13 +118,6 @@ class UsersDB {
 
     } 
 
-    public function login() {
-        $sql = self::$baseSQL . "where email = :email and password = :password"; 
-        $statement = $pdo->prepare($sql);
-        $statement->bindValue(":email", $POST["email"]);
-        $statement->bindValue(":password", $_POST["password"]);
-        $result = $statement->excute();
-    } 
 }
 
 ?>

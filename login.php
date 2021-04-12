@@ -1,9 +1,14 @@
-
-
 <?php 
   include 'includes/helpers.inc.php';
   include 'includes/db-classes.inc.php';
   include 'includes/stock-config.inc.php';
+
+  session_start();
+
+  if (isset($_SESSION[("loggedin")])){
+    header("location: index.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +22,6 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-
         <header class="navbar">
             <div class="currentPage">
                 <a href="login.php">Login</a>
@@ -33,43 +37,19 @@
                 <a href="logout.php">Logout</a>
             </div>
         </header>
+
+<!--  Retrived from:  https://codepen.io/danzawadzki/pen/EgqKRr -->
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <h2 class="active"> Sign In </h2>
+
+      <form method="post" action= "includes\login.inc.php">
+        <input type="text" id="login" class="fadeIn second" name="email" placeholder="email">
+        <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
     
-
-    <form method="post" action= "loginhelper.php">
-  <table class="loginTable">
-     <tr>
-      <th>LOGIN</th>
-     </tr>
-     <tr>
-      <td>
-        <label class="firstLabel">Email:</label>
-        <input type="text" name="email" id="email"/>
-      </td>
-     </tr>
-     <tr>
-      <td><label>Password:</label>
-        <input type="password" name="password" id="password"/></td>
-     </tr>
-     <tr>
-      <td>
-         <input type="submit" name="submitBtnLogin" id="submitBtnLogin" value="Login" />
-
-         <span class="loginMsg"><?php echo @$msg;?></span>
-
-      </td>
-     </tr>
-  </table>
-</form>
-
-
     </body>
-
-    
+   
     <script src="js/main.js"></script>
-</html>
-
-    
-    <script src="js/main.js"></script>
-
-
 </html>
