@@ -30,6 +30,7 @@ function populateCompanyList(companies) {
 
         companyList.appendChild(li);
     });
+
     setTimeout( () => {
         document.querySelector('.sk-circle').style.display = "none";
         companyList.style.display = "inline-block";
@@ -50,4 +51,5 @@ function MakeClickable() {
         });
         
     };
+
 }

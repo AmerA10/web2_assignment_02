@@ -1,21 +1,24 @@
 <?php
 
-include 'includes/helpers.inc.php';
-include 'includes/db-classes.inc.php';
-include 'includes/config.inc.php';
+include 'helpers.inc.php';
+include 'db-classes.inc.php';
+include 'config.inc.php';
+
 
 $pdo = DatabaseHelper::createConnection(array(DBCONNSTRING, DBUSER, DBPASS));
-//$usersGateway = new UsersDB($pdo);
+$usersGateway = new UsersDB($pdo);
 
 //check query string print login failled
-if (loginCheck($pdo)){         
-    header("location: index.php");
+
+if (loginCheck($pdo)){     
+    session_start();    
+    $_SESSION[("loggedin")] = true;
+    header("location: \web2_assignment_02-main\index.php");
     exit();
 }else{
-    header("location: login.php?loginError=1");
+    header("location: \web2_assignment_02-main\login.php");
     exit();
 }
-
 
 //check if email is left empty
 function loginCheck($pdo){
@@ -31,8 +34,6 @@ function loginCheck($pdo){
            $userPwd = $_POST['password'];
            if(password_verify($userPwd, $statement[0]['password'])){
                 
-            session_start();
-
             return true;
         }
     } 
