@@ -13,10 +13,10 @@ $usersGateway = new UsersDB($pdo);
 if (loginCheck($pdo)){     
     session_start();    
     $_SESSION[("loggedin")] = true;
-    header("location: \web2_assignment_02-main\index.php");
+    header("location: ..\index.php");
     exit();
 }else{
-    header("location: \web2_assignment_02-main\login.php");
+    header("location: ..\login.php");
     exit();
 }
 
