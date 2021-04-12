@@ -29,6 +29,17 @@
     justify-content: space-evenly;
 }
 
+
+.buttonContainer > a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(64, 124, 255);
+    text-align: center;
+    
+    padding: 10px;
+    width: 150px;
+    border-radius: 8px;
+
 button {
     color: white;
     background-color: rgb(64, 124, 255);
@@ -36,6 +47,7 @@ button {
     border-radius: 8px;
     padding: 10px;
     width: 200px;
+
 }
 
 button:hover {

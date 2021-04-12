@@ -1,4 +1,5 @@
 
+
 <?php 
 require_once 'includes/db-classes.inc.php';
 require_once 'includes/helpers.inc.php'; 
@@ -23,6 +24,10 @@ catch(Exception $e){
     die($e ->getMessage());
 }
 
+        }
+     } catch (PDOException $e) {
+        die( $e->getMessage() );
+     }
 ?>
 
 
@@ -76,10 +81,16 @@ catch(Exception $e){
             </span>
             <br/>
             <div class="buttonContainer">
+
+               
+                <a href='history.php?symbol=<?=$company['symbol']?>&sort=date'>History</a>
+           
+
                 <a href="addtofav.php?symbol=<?=$company['symbol']?>" class="favoritesButton">Add to Favorites</button>
-                <button class="historyButton">History</button>
+             
             </div>
         </div>
+
 
     </body>
     <script src="js/main.js"></script>
