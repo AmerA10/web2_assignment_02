@@ -13,8 +13,10 @@ class CompanyDB {
     } 
 
     public function getAllForCompany($symbol) { 
-        $sql = self::$baseSQL . " WHERE symbol='$symbol'"; 
-        $statement = DatabaseHelper::runQuery($this->pdo, $sql, null); 
+ 
+        $symbol = strtolower($symbol);
+        $sql = self::$baseSQL . " WHERE symbol=?"; 
+        $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array($symbol)); 
         return $statement->fetchAll(); 
     } 
 } 

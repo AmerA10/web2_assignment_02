@@ -1,5 +1,4 @@
-const companyAPI = 'stock-api.php';
-
+const companyAPI = 'api-companies.php';
 let companies = []; 
 const companyTable = document.querySelector('#list');
 const filterBox = document.querySelector('#filter');
@@ -19,7 +18,10 @@ fetch(companyAPI)
             if (x > y) {return 1;}
             return 0;
       });
+
         populateCompanyTable(companies);
+        MakeClickable();
+
     })
     .catch( error => console.log('found a ${error}') );
 
