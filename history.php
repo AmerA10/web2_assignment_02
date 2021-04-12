@@ -1,3 +1,4 @@
+
 <?php
     include 'includes/helpers.inc.php';
     include 'includes/db-classes.inc.php';
@@ -77,4 +78,5 @@
         </header>
     </body>
     <script src="js/main.js"></script>
+
 </html>
