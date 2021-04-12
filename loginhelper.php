@@ -1,3 +1,4 @@
+
 <?php
 
 include 'includes/helpers.inc.php';
@@ -44,3 +45,4 @@ function loginCheck($pdo){
 }
 
 ?>
+

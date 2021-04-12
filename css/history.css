@@ -1,4 +1,7 @@
-table {
+
+.historyTable {
+    border-spacing: 0;
+
     width: 100%;
     margin: auto;
     table-layout: fixed;
@@ -6,13 +9,32 @@ table {
 }
 
 tbody td {
+
     border: 1px solid black;
     font-size: 9pt;
     padding: 2px;
+
+    font-size: 9pt;
+    padding: 7px 0px 7px 0px;
+}
+
+/* tbody tr {
+    background-color: rgb(233, 233, 233);
+} */
+
+tr:nth-child(even) {
+    background-color: rgb(233, 233, 233);
+}
+
+tr:hover {
+    background-color: lightgray;
+
 }
 
 th {
     border-bottom: 1px solid black;
+
 }
 
 th a { text-decoration: none;}
+

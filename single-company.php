@@ -1,4 +1,5 @@
 
+
 <?php 
 require_once 'includes/db-classes.inc.php';
 require_once 'includes/helpers.inc.php'; 
@@ -21,6 +22,7 @@ try {
 catch(Exception $e){
     die($e ->getMessage());
 }
+
 
 ?>
 
@@ -76,13 +78,19 @@ catch(Exception $e){
             </span>
             <br/>
             <div class="buttonContainer">
-                <a href='addtofav.php?symbol=<?=$company['symbol']?>'>Add to Favorites</a>
+
+
+               
                 <a href='history.php?symbol=<?=$company['symbol']?>&sort=date'>History</a>
+           
+
+                <a href="addtofav.php?symbol=<?=$company['symbol']?>" class="favoritesButton">Add to Favorites</button>
+             
+
             </div>
         </div>
 
 
-=======
         <h1>
      
         </h1>

@@ -1,10 +1,9 @@
-<?php 
 
+
+<?php 
   include 'includes/helpers.inc.php';
   include 'includes/db-classes.inc.php';
   include 'includes/config.inc.php';
-
-
 ?>
 
 <!DOCTYPE html>
@@ -19,10 +18,23 @@
 </head>
 <body>
 
-    <?php
-        include_once 'header.php '
-        
-    ?>
+        <header class="navbar">
+            <div class="currentPage">
+                <a href="login.php">Login</a>
+                <i class="fa fa-bars menuIcon"></i>
+            </div>
+            
+            <div class="pageLinks">
+                <a href="about.php">About</a>
+                <a href="list.php">Companies</a>
+                <a href="portfolio.php">Portfolio</a>
+                <a href="profile.php">Profile</a>
+                <a href="favorites.php">Favorites</a>
+                <a href="logout.php">Logout</a>
+            </div>
+        </header>
+    
+
     <form method="post" action= "loginhelper.php">
   <table class="loginTable">
      <tr>
@@ -41,17 +53,23 @@
      <tr>
       <td>
          <input type="submit" name="submitBtnLogin" id="submitBtnLogin" value="Login" />
+
          <span class="loginMsg"><?php echo @$msg;?></span>
+
       </td>
      </tr>
   </table>
 </form>
 
 
-
-
     </body>
 
     
     <script src="js/main.js"></script>
+</html>
+
+    
+    <script src="js/main.js"></script>
+
+
 </html>

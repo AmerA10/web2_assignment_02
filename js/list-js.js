@@ -22,6 +22,7 @@ function populateCompanyTable(companies) {
 
         let symbol = company.symbol;
         symbol = symbol.toLowerCase();
+
         let tr = document.createElement('tr');
         let tdimg = document.createElement('td');
         //had to add this sperate for css (flexbox)
@@ -35,6 +36,7 @@ function populateCompanyTable(companies) {
         tdlink2.innerHTML = `<a class='link' href='single-company.php?symbol=${symbol}'>${company.name}</a>`;
         tr.appendChild(tdlink2);
         companyTable.appendChild(tr);
+
     });
     setTimeout( () => {
         document.querySelector('.sk-circle').style.display = "none";

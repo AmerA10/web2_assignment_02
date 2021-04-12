@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -32,7 +33,7 @@ function createFavList() {
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-        <header class="navbar">
+header class="navbar">
             <div class="currentPage">
                 <a href="favorites.php">Favourites</a>
                 <i class="fa fa-bars menuIcon"></i>
@@ -49,10 +50,12 @@ function createFavList() {
             </div>
         </header>
         <div>
+
             <table style="width:100%" id="favtable">
                 <?=createFavList();?>
             </table>
             <a href='removefavorite.php?entry=all'>Remove All</a>
+
         <div>
     </body>
     <script src="js/main.js"></script>
