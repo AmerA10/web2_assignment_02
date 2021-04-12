@@ -25,8 +25,8 @@ function populateCompanyList(companies) {
         + `<div class='list-item-section3'>${company.name}</div>`;
         companyList.appendChild(li);
     });
-    setTimeout( () => {
-        document.querySelector('.sk-circle').style.display = "none";
-        companyList.style.display = "inline-block";
-    }, 1000);
+     setTimeout( () => {
+         document.querySelector('.sk-circle').style.display = "none";
+         companyList.style.display = "inline-block";
+     }, 1000);
 }
