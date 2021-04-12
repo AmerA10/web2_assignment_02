@@ -17,11 +17,8 @@ fetch(companyAPI)
             if (x < y) {return -1;}
             if (x > y) {return 1;}
             return 0;
-      });
-
+        });
         populateCompanyTable(companies);
-        MakeClickable();
-
     })
     .catch( error => console.log('found a ${error}') );
 
