@@ -1,26 +1,26 @@
-const companyAPI = 'api-companies.php';
+const companyAPI = 'stock-api.php';
 let companies = []; 
 const companyTable = document.querySelector('#list');
 const filterBox = document.querySelector('#filter');
 fetch(companyAPI)
     .then( response => {
-        if(response.ok) 
-            return response.json();
-        else
-            throw new Error("Response from json failed!")
-        })
-    .then( data => {
-        companies.push(...data);
-        companies.sort(function(a, b){
-            let x = a.symbol.toLowerCase();
-            let y = b.symbol.toLowerCase();
-            if (x < y) {return -1;}
-            if (x > y) {return 1;}
-            return 0;
-        });
-        populateCompanyTable(companies);
-    })
-    .catch( error => console.log('found a ${error}') );
+         if(response.ok) 
+             return response.json();
+         else
+             throw new Error("Response from json failed!")
+         })
+     .then( data => {
+         companies.push(...data);
+         companies.sort(function(a, b){
+             let x = a.symbol.toLowerCase();
+             let y = b.symbol.toLowerCase();
+             if (x < y) {return -1;}
+             if (x > y) {return 1;}
+             return 0;
+         });
+         populateCompanyTable(companies);
+     })
+     .catch( error => console.log(error) );
 
 /* Adds a handler to search for a company typed in the textbox
 (refer to findMatches function) */

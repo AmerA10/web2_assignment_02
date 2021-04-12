@@ -2,9 +2,10 @@
 <?php 
 require_once 'includes/db-classes.inc.php';
 require_once 'includes/helpers.inc.php'; 
-require_once 'includes/stock-config.inc.php';
+require_once 'includes/config.inc.php';
 
-$gateway = new CompanyDB($connection);
+$conn = DatabaseHelper::createConnection(array(DBCONNSTRING,DBUSER,DBPASS));
+$gateway = new CompanyDB($conn);
 try {
 
     if(isset($_GET['symbol'])) {

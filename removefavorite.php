@@ -1,7 +1,4 @@
 <?php
-
-    //still need lots of work on this. trying to figure out how to properly remove the
-    //array from the session.
     session_start();
 
     $favorites = $_SESSION['fav'];
