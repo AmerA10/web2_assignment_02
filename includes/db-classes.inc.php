@@ -127,15 +127,14 @@ class UsersDB {
     public function compareUserId($id, $email) {
         $sql = "SELECT id FROM users WHERE email=?";
         $statement = DatabaseHelper::runQuery($this->pdo, $sql, Array(($email)));
+        $statement = $statement->fetchAll();
         if($statement[0]['id'] == $id) {
             return true;
         }
         else {
             return false;
-        }
-        
+        }   
     }
-
 }
 
 ?>
