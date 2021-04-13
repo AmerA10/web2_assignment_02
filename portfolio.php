@@ -15,6 +15,9 @@ try {
     $userEmail = $_SESSION['userEmail'];
     echo $userId;
     echo $userEmail;
+    $closeAmt = 0;
+    $valueAmt = 0;
+    $totalAmt = 0;
     /*todo::
     display::
     company logo
@@ -37,23 +40,12 @@ try {
 
             $userStuff = $usersGateWay->getAllForUser($userId);
             $portfolio = $portGateway->getAllForUserPortfolio($userId);
-            $closeAmt = 0;
-            $valueAmt = 0;
-            $totalAmt = 0;
+      
 
 
 
             echo '</br>';
-            foreach ($portfolio as $port) { //this gives access to every image logo for the dumbass companies
-                echo '-------------------- </br>';
-                echo "<img src =logos/$port[symbol].svg></br>";
-                echo 'Symbol:  ' . $port['symbol'] . '-  Amount:  ' . $port['amount'];
-                $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
-                echo (' - Close: ' . $companyHistoryDate[0]['close']);
-                echo (' - value ' . $companyHistoryDate[0]['close'] * $port['amount'] . '</br>');
-                //because the order by is desc, the date at the [0] position is the latest
-                echo '-------------------- </br>';
-            }
+           
         }
     }
 } catch (Exception $e) {
@@ -93,6 +85,34 @@ try {
             <a href="logout.php">Logout</a>
         </div>
     </header>
+    <table width = '100%'>
+    <tr>
+        <th>Logo</th>
+        <th>Symbol</th>
+        <th>name</th>
+        <th>Num of Shares</th>
+        <th>Close Amt</th>
+        <th>Value Amt</th>
+    </tr>
+    <?php
+     foreach ($portfolio as $port) { //this gives access to every image logo for the dumbass companies
+        echo '<tr>';
+        echo "<th><img src =logos/$port[symbol].svg></th>";
+        echo "<th> $port[symbol]</th>";
+        echo "<th>$port[amount]</th>";
+        $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
+        echo "<th> $companyHistoryDate[0][close]</th>";
+        $valueAmt = $companyHistoryDate[0]['close'] * $port['amount'];
+        echo "<th>$valueAmt</th>";
+        //because the order by is desc, the date at the [0] position is the latest
+        echo '</tr>';
+    }
+
+    ?>
+    <thead>
+
+    </thead>
+    </table>
 </body>
 <script src="js/main.js"></script>
 
