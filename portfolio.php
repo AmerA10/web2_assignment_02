@@ -9,6 +9,8 @@ include 'includes/stock-config.inc.php';
 $usersGateWay = new UsersDB($connection);
 $portGateway = new PortfolioDB($connection);
 $historyGateway = new HistoryDB($connection);
+$companyGateWay = new CompanyDB($connection);
+
 
 try {
     $userId = $_SESSION['userId'];
@@ -31,7 +33,7 @@ try {
 
             $userStuff = $usersGateWay->getAllForUser($userId);
             $portfolio = $portGateway->getAllForUserPortfolio($userId);
-
+            
         }
     }
     else {

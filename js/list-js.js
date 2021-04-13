@@ -89,7 +89,7 @@ function populateTable(company) {
     // creating the larger image to show when hovering
     let enlargedImg = document.createElement('div');
     enlargedImg.className = 'enlargedImg';
-    enlargedImg.innerHTML = `<img id = 'enlargedListImg' src="logos/${company.symbol}.svg" style="width: 300px; height: 100px">`;
+    enlargedImg.innerHTML = `<img src="logos/${company.symbol}.svg" style="width: 300px; height: 100px">`;
     tdimg.appendChild(enlargedImg);
 
     tdlink1.innerHTML = `<a class='link' href='single-company.php?symbol=${symbol}'>${company.symbol}</a>`;
