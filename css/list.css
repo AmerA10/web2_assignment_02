@@ -91,14 +91,13 @@ a:link {
 }
 
 .logo {
-  width:fit-content;
+  
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #listImg {
-  width:20%;
-  height:20%;
+
   object-fit:scale-down;
 }
