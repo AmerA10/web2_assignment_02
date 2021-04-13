@@ -95,3 +95,8 @@ a:link {
   justify-content: center;
   align-items: center;
 }
+
+.enlargedImg {
+  display: none;
+  position: absolute;
+}

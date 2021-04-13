@@ -78,11 +78,32 @@ function populateTable(company) {
     tdimg.className = 'logo';
     let tdlink1 = document.createElement('td');
     let tdlink2 = document.createElement('td');
-    tdimg.innerHTML = `<img src="logos/${company.symbol}.svg" style="width:100px; height:50px">`;
+    
+    tdimg.innerHTML = `<img src="logos/${company.symbol}.svg" style="width: 150px; height: 50px">`;
     tr.appendChild(tdimg);
+
+    // creating the larger image to show when hovering
+    let enlargedImg = document.createElement('div');
+    enlargedImg.className = 'enlargedImg';
+    enlargedImg.innerHTML = `<img src="logos/${company.symbol}.svg" style="width: 300px; height: 100px">`;
+    tdimg.appendChild(enlargedImg);
+
     tdlink1.innerHTML = `<a class='link' href='single-company.php?symbol=${symbol}'>${company.symbol}</a>`;
     tr.appendChild(tdlink1);
     tdlink2.innerHTML = `<a class='link' href='single-company.php?symbol=${symbol}'>${company.name}</a>`;
     tr.appendChild(tdlink2);
-    companyTable.appendChild(tr);
+
+    tdimg.addEventListener('mouseenter', function() {
+        enlargedImg.style.display = 'block';
+    })
+    tdimg.addEventListener('mouseleave', function() {
+        enlargedImg.style.display = 'none';
+    })
+    tdimg.addEventListener('mousemove', function(e) {
+        const yPos = e.pageY - 125; // modifying positions so that they appear closer to the cursor
+        const xPos = e.pageX - 150;
+        enlargedImg.style.top = `${yPos}px`;
+        enlargedImg.style.left = `${xPos}px`;
+    })
+    companyTable.appendChild(tr);  
 }
