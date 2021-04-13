@@ -15,12 +15,23 @@ try {
     $userEmail = $_SESSION['userEmail'];
     echo $userId;
     echo $userEmail;
+    /*todo::
+    display::
+    company logo
+    company symbol
+    company name
+    number of shares
+    close
+    value = close * number of shares
+    total = all of values added together
+
+
+    */
 
     if (isset($_SESSION['userId'])) {
         $userId = $_SESSION['userId'];
         $userEmail = $_SESSION['userEmail'];
-        echo $userId;
-        echo $userEmail;
+
         if ($usersGateWay->compareUserId($userId, $userEmail)) {
 
 
@@ -30,13 +41,12 @@ try {
             $valueAmt = 0;
             $totalAmt = 0;
 
-            print_r($portfolio);
 
-            print_r($userStuff);
 
             echo '</br>';
             foreach ($portfolio as $port) { //this gives access to every image logo for the dumbass companies
                 echo '-------------------- </br>';
+                echo "<img src =logos/$port[symbol].svg></br>";
                 echo 'Symbol:  ' . $port['symbol'] . '-  Amount:  ' . $port['amount'];
                 $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
                 echo (' - Close: ' . $companyHistoryDate[0]['close']);
@@ -45,7 +55,6 @@ try {
                 echo '-------------------- </br>';
             }
         }
-    
     }
 } catch (Exception $e) {
 
