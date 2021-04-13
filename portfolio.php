@@ -74,8 +74,6 @@ try {
             <a href="logout.php">Logout</a>
         </div>
     </header>
-    <div id='table_wrapper'>
-        <div id='portfolioTable'>
             <table>
                 <thead>
                     <tr>
@@ -117,8 +115,8 @@ try {
 
                 </tfoot>
             </table>
-        </div>
-    </div>
+   
+  
 </body>
 <script src="js/main.js"></script>
 
