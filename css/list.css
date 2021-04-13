@@ -98,8 +98,9 @@ a:link {
 }
 
 #listImg {
+  object-fit:contain;
   max-width: 40%;
   height:calc((100vw / (16/9)) /8);
   max-height: 20%;
-  object-fit:cover;
+
 }
