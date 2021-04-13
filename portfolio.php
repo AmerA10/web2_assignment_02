@@ -89,14 +89,14 @@ try {
     <?php
      foreach ($portfolio as $port) { //this gives access to every image logo for the dumbass companies
         echo '<tr>';
-        echo "<th><img class= 'logo' id='listImg' src=logos/$port[symbol].svg></th>";
-        echo "<th> $port[symbol]</th>";
-        echo "<th>$port[amount]</th>";
+        echo "<td><img class= 'logo' id='listImg' src=logos/$port[symbol].svg></td>";
+        echo "<td> $port[symbol]</td>";
+        echo "<td>$port[amount]</td>";
         $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
-        echo "<th>" . $companyHistoryDate[0]['close'] . "</th>";
+        echo "<td>" . $companyHistoryDate[0]['close'] . "</td>";
         $valueAmt = $companyHistoryDate[0]['close'] * $port['amount'];
         $totalAmt += $valueAmt;
-        echo "<th>$valueAmt</th>";
+        echo "<td>$valueAmt</td>";
         //because the order by is desc, the date at the [0] position is the latest
         echo '</tr>';
     }

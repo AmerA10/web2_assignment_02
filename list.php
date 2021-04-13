@@ -49,7 +49,6 @@
                     <div id='companytable'>
 
                         <table>
-
                             <thead>
                                 <tr>
                                     <th><span class="title">Logo</span></th>
@@ -58,7 +57,7 @@
                                 </tr>
                             </thead>
                             <tbody id='list'>
-                            
+
                         
                             </tbody>
                         </table>
