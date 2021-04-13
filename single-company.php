@@ -90,10 +90,7 @@ catch(Exception $e){
 
             </div>
         </div>
-
-
         <h1>
-     
         </h1>
         <ul id="companylist">
         <?php
