@@ -2,8 +2,9 @@
 -- Data import script for stocks (3rd edition) database
 --
 
-
-USE `clz0x0pl2elccpx8`;
+DROP DATABASE IF EXISTS `stocks`;
+CREATE DATABASE IF NOT EXISTS `stocks`;
+USE `stocks`;
 
 --
 -- Table structure for table `companies`
@@ -229,7 +230,7 @@ INSERT INTO `companies` VALUES ('WHR','Whirlpool Corp.','Consumer Discretionary'
 INSERT INTO `companies` VALUES ('WM','Waste Management Inc.','Industrials','Environmental Services','Houston, Texas','New York Stock Exchange','http://www.wm.com','Waste Management, Inc., through its subsidiaries, provides waste management environmental services to residential, commercial, industrial, and municipal customers in North America. ',29.7557,-95.3639,NULL);
 INSERT INTO `companies` VALUES ('WMB','Williams Cos.','Energy','Oil & Gas Exploration & Production','Tulsa, Oklahoma','New York Stock Exchange','http://www.williams.com','The Williams Companies, Inc., together with its subsidiaries, operates as an energy infrastructure company primarily in the United States. ',36.1553,-95.9906,NULL);
 INSERT INTO `companies` VALUES ('WMT','Wal-Mart Stores','Consumer Staples','Hypermarkets & Super Centers','Bentonville, Arkansas','New York Stock Exchange','http://www.walmart.com','Walmart Inc. engages in the retail and wholesale operations in various formats worldwide. ',36.3652,-94.2175,'{\"years\":[2019,2018,2017],\"revenue\":[523964000,514405000,500343000],\"earnings\":[14881000,6670000,9862000],\"assets\":[236495000,219295000,204522000],\"liabilities\":[154943000,139661000,123700000]}');
-INSERT INTO `companies` VALUES ('WY','Weyerhaeuser Corp.','Real Estate','REITs','Federal Way, Washington','New York Stock Exchange','http://www.weyerhaeuser.com',"Weyerhaeuser Company, one of the world\'s largest private owners of timberlands, began operations in 1900.",47.6004,-122.332,NULL);
+INSERT INTO `companies` VALUES ('WY','Weyerhaeuser Corp.','Real Estate','REITs','Federal Way, Washington','New York Stock Exchange','http://www.weyerhaeuser.com','Weyerhaeuser Company, one of the world\'s largest private owners of timberlands, began operations in 1900.',47.6004,-122.332,NULL);
 INSERT INTO `companies` VALUES ('WYNN','Wynn Resorts Ltd','Consumer Discretionary','Casinos & Gaming','Las Vegas, Nevada','New York Stock Exchange','https://www.wynnresorts.com','Wynn Resorts, Limited designs, develops, and operates integrated resorts. ',36.1271,-115.165,NULL);
 INSERT INTO `companies` VALUES ('XEL','Xcel Energy Inc','Utilities','MultiUtilities','Minneapolis, Minnesota','New York Stock Exchange','http://www.xcelenergy.com','Xcel Energy Inc., through its subsidiaries, generates, purchases, transmits, distributes, and sells electricity.',44.9796,-93.2705,NULL);
 INSERT INTO `companies` VALUES ('XOM','Exxon Mobil Corp.','Energy','Integrated Oil & Gas','Irving, Texas','New York Stock Exchange','http://www.exxonmobil.com','Exxon Mobil Corporation explores for and produces crude oil and natural gas in the United States, Canada/other Americas, Europe, Africa, Asia, and Australia/Oceania.',32.89,-96.9498,'{\"years\":[2019,2018,2017],\"revenue\":[255583000,279332000,237162000],\"earnings\":[14340000,20840000,19710000],\"assets\":[362597000,346196000,348691000],\"liabilities\":[163659000,147668000,154191000]}');

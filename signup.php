@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,5 +28,4 @@
         <h1>COMING SOON!</h1>
     </body>
     <script src="js/main.js"></script>
-
 </html>

@@ -1,10 +1,7 @@
-
-const filterBox = document.querySelector('#filter');
-
-const companyAPI = 'api-companies.php';
+const companyAPI = 'stock-api.php';
 let companies = []; 
 const companyTable = document.querySelector('#list');
-
+const filterBox = document.querySelector('#filter');
 fetch(companyAPI)
     .then( response => {
         if(response.ok) 
@@ -22,7 +19,6 @@ fetch(companyAPI)
             return 0;
         });
         populateCompanyTable(companies);
-
     })
     .catch( error => console.log('found a ${error}') );
 
@@ -110,5 +106,4 @@ function populateTable(company) {
         enlargedImg.style.left = `${xPos}px`;
     })
     companyTable.appendChild(tr);  
-
 }
