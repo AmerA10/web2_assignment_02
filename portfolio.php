@@ -101,7 +101,7 @@ try {
         echo "<th> $port[symbol]</th>";
         echo "<th>$port[amount]</th>";
         $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
-        echo "<th> $companyHistoryDate[0][close]</th>";
+        echo "<th>" . $companyHistoryDate[0]['close'] . "</th>";
         $valueAmt = $companyHistoryDate[0]['close'] * $port['amount'];
         echo "<th>$valueAmt</th>";
         //because the order by is desc, the date at the [0] position is the latest
