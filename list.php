@@ -20,7 +20,7 @@
                 <a href="index.php">Home</a>
                 <a href="about.php">About</a>
                 <a href="list.php">Companies</a>
-                <a href="login.php">login</a>
+                <a href="login.php">Login</a>
             </div>
         </header>
             <form>
