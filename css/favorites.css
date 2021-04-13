@@ -1,0 +1,41 @@
+table { 
+    width: 80%; 
+    margin-left: 10%; 
+    margin-right: 10%;
+    margin-top: 50px;
+}
+
+td {
+    font-size: 16pt;
+}
+
+td {
+    border-bottom: 3px rgb(64, 124, 255) solid;
+}
+
+.remove {
+    padding: 10px;
+    width: 150px;
+    border-radius: 8px;
+}
+
+.remove:hover {
+    background-color: rgb(28, 68, 156);
+}
+
+.removeall {
+    padding: 15px;
+    width: 150px;
+    border-radius: 8px;
+    position: relative;
+    top: 50px;
+    left: 100px;
+    font-size: 25px;
+}
+
+.remove, .removeall {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(64, 124, 255);
+    text-align: center;
+}

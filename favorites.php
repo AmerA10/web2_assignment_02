@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -11,10 +10,10 @@ function createFavList() {
         for($i = 0; $i < count($favorites); $i++) {
             foreach ($favorites[$keys[$i]] as $array) {
                 echo '<tr>';
-                echo "<td><img src='logos/" . $array['symbol'] . ".svg' style='width:60px;height:60px'></td>";
+                echo "<td><img src='logos/" . $array['symbol'] . ".svg' style='width:160px;height:100px'></td>";
                 echo "<td>" . $array['symbol'] . "</td>";
                 echo "<td>" . $array['name'] . "</td>";
-                echo "<td><a href='removefavorite.php?entry=" . $i . "'>Remove</a></td>";
+                echo "<td><a class='remove' href='removefavorite.php?entry=" . $i . "'>Remove</a></td>";
                 echo '</tr>';
             }
     
@@ -31,11 +30,11 @@ function createFavList() {
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/favorites.css">
 </head>
 <body>
-
+        <header class="navbar">
             <div class="currentPage">
-                <a href="index.php"><img src='logos/sitelogo.png' class='sitelogo'></a>
                 <a href="favorites.php">Favourites</a>
                 <i class="fa fa-bars menuIcon"></i>
             </div>
@@ -51,12 +50,10 @@ function createFavList() {
             </div>
         </header>
         <div>
-
-            <table style="width:100%" id="favtable">
+            <table id="favtable">
                 <?=createFavList();?>
             </table>
-            <a href='removefavorite.php?entry=all'>Remove All</a>
-
+            <a class='removeall' href='removefavorite.php?entry=all'>Remove All</a>
         <div>
     </body>
     <script src="js/main.js"></script>
