@@ -69,7 +69,7 @@ td, th {
 }
 
 .title {
-  font-size: 16pt;
+  font-size: 20pt;
   font-weight: bold;
 }
 
@@ -79,7 +79,7 @@ th {
 }
 
 a:link.link {
-  font-size: 12pt;
+  font-size: 16pt;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,3 +95,4 @@ a:link {
   justify-content: center;
   align-items: center;
 }
+

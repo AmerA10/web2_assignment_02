@@ -78,7 +78,7 @@ function populateTable(company) {
     tdimg.className = 'logo';
     let tdlink1 = document.createElement('td');
     let tdlink2 = document.createElement('td');
-    tdimg.innerHTML = `<img src="logos/${company.symbol}.svg" style="width:160px;height:100px">`;
+    tdimg.innerHTML = `<img class='companylogo' src="logos/${symbol}.svg" style="width:160px;height:100px">`;
     tr.appendChild(tdimg);
     tdlink1.innerHTML = `<a class='link' href='single-company.php?symbol=${symbol}'>${company.symbol}</a>`;
     tr.appendChild(tdlink1);

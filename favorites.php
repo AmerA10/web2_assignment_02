@@ -11,8 +11,8 @@ function createFavList() {
             foreach ($favorites[$keys[$i]] as $array) {
                 echo '<tr>';
                 echo "<td><img src='logos/" . $array['symbol'] . ".svg' style='width:160px;height:100px'></td>";
-                echo "<td>" . $array['symbol'] . "</td>";
-                echo "<td>" . $array['name'] . "</td>";
+                echo "<td><a href='single-company.php?symbol=" . $array['symbol'] . "'>" . $array['symbol'] . "</a></td>";
+                echo "<td><a href='single-company.php?symbol=" . $array['symbol'] . "'>" . $array['name'] . "</a></td>";
                 echo "<td><a class='remove' href='removefavorite.php?entry=" . $i . "'>Remove</a></td>";
                 echo '</tr>';
             }
