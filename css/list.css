@@ -91,7 +91,7 @@ a:link {
 }
 
 .logo {
-  height:auto;
+  height:100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,6 +99,7 @@ a:link {
 
 #listImg {
   max-width: 20%;
+
   max-height: 150%;
   object-fit:contain;
 }
