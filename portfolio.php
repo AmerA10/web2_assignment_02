@@ -96,6 +96,9 @@ try {
         echo "<td> $port[symbol]</td>";
         echo "<td>$port[amount]</td>";
         $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
+        $companyName = $companyGateWay->getAllForCompany($port['symbol']);
+        $companyName = $companyName[0]['name'];
+        echo "<td> $companyName </td>"; 
         echo "<td>" . $companyHistoryDate[0]['close'] . "</td>";
         $valueAmt = $companyHistoryDate[0]['close'] * $port['amount'];
         echo $companyHistoryDate[0]['close'] * $port['amount'];
