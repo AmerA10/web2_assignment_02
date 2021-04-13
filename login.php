@@ -30,12 +30,11 @@
             </div>
             
             <div class="pageLinks">
+                <a href ='index.php'>Home</a>
                 <a href="about.php">About</a>
                 <a href="list.php">Companies</a>
-                <a href="portfolio.php">Portfolio</a>
-                <a href="profile.php">Profile</a>
-                <a href="favorites.php">Favorites</a>
-                <a href="logout.php">Logout</a>
+               
+             
             </div>
         </header>
 
