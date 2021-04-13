@@ -86,6 +86,7 @@ try {
         </div>
     </header>
     <table width = '100%'>
+    <thead>
     <tr>
         <th>Logo</th>
         <th>Symbol</th>
@@ -94,6 +95,8 @@ try {
         <th>Close Amt</th>
         <th>Value Amt</th>
     </tr>
+    </thead>
+    <tbody>
     <?php
      foreach ($portfolio as $port) { //this gives access to every image logo for the dumbass companies
         echo '<tr>';
@@ -103,15 +106,24 @@ try {
         $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
         echo "<th>" . $companyHistoryDate[0]['close'] . "</th>";
         $valueAmt = $companyHistoryDate[0]['close'] * $port['amount'];
+        $totalAmt += $valueAmt;
         echo "<th>$valueAmt</th>";
         //because the order by is desc, the date at the [0] position is the latest
         echo '</tr>';
     }
 
     ?>
-    <thead>
+    </tbody>
+    <tfoot>
+    <?php
 
-    </thead>
+    echo "<tr>";
+    echo "<th> $totalAmt </th>";
+    echo "</tr>";
+
+    ?>
+    
+    </tfoot>
     </table>
 </body>
 <script src="js/main.js"></script>
