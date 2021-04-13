@@ -85,7 +85,7 @@ try {
         <th><span class = 'title'>Value Amt</span></th>
     </tr>
     </thead>
-    <tbody>
+    <tbody id='list'>
     <?php
      foreach ($portfolio as $port) { //this gives access to every image logo for the dumbass companies
         echo '<tr>';
