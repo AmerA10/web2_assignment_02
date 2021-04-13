@@ -76,7 +76,7 @@ try {
     </header>
     <div id='table_wrapper'>
         <div id='portfolioTable'>
-            <table width='100%'>
+            <table>
                 <thead>
                     <tr>
                         <th><span class='title'>Logo</span></th>
