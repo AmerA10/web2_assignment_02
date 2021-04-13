@@ -98,7 +98,7 @@ a:link {
 }
 
 #listImg {
-  max-width: 10%;
-  max-height: 90%;
+  max-width: 20%;
+  max-height: 150%;
   object-fit:contain;
 }
