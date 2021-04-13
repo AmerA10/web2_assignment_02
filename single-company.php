@@ -46,26 +46,29 @@
                 <h2 class="name"><?=$company['name']?></h2>
                 <h2 class="symbol"><?=$company['symbol']?></h2>
             </span>
-            <hr>
-            <p class="description"><?=$company['description']?></p>
-            <hr>
-            <span id="companyInfoBody">
-                <div>
-                    <span class="bold">Sector: </span><?=$company['sector']?><br>
-                    <span class="bold">Subindustry: </span><?=$company['subindustry']?><br>
-                    <span class="bold">Exchange: </span><?=$company['exchange']?>
+            <div id="companyInfoBody">
+                <hr>
+                <p class="description"><?=$company['description']?></p>
+                <hr>
+                    <div class='leftContainer'>
+                        <span class="bold">Sector </span><br><span><?=$company['sector']?></span><br><br>
+                        <hr>
+                        <span class="bold">Subindustry </span><span><br><?=$company['subindustry']?><span><br>
+                    </div>
+                    <div class='rightContainer'>
+                        <span class="bold">Exchange </span><br><span><?=$company['exchange']?></span><br><br>
+                        <hr>
+                        <span class="bold">Location </span><br><span><?=$company['address']?><span><br>
+                        <a href="" id="companyURL"><?=$company['website']?></a>
+                    </div>
                 </div>
-                <div>
-                    <span class="bold">Location: </span><?=$company['address']?><br>
-                    <a href="" id="companyURL"></a>
-                </div>
-            </span>
-            <br/>
+                
+            <br/><br/>
             <div class="buttonContainer">
-                <a href='addtofav.php'>Add to Favorites</a>
+                <a href='addtofav.php?symbol='<?=$company['symbol']?>>Add to Favorites</a>
                 <a href='history.php?symbol=<?=$company['symbol']?>&sort=date'>History</a>
             </div>
-        </div>
+            </div>
     </body>
     <script src="js/main.js"></script>
 </html>
