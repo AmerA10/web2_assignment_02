@@ -98,6 +98,6 @@ a:link {
 }
 
 #listImg {
-  max-width: 40%;
+  max-width: 20%;
   object-fit:cover;
 }
