@@ -101,7 +101,7 @@ a:link {
 #listImg {
  
 max-width: 40%;
-height:calc((100vw / (16/9)) /10);
+height:calc((65vw / (16/10)) /7);
 max-height: 20%;
 object-fit:contain;
 
