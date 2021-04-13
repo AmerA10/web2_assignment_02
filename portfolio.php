@@ -112,10 +112,8 @@ try {
     </tbody>
     <tfoot>
     <?php
-    echo "<th> Total Amount <th>";
-    echo "<tr>";
-    echo "<td> $totalAmt </td>";
-    echo "</tr>";
+    echo "<th> Total Amount <th><tr><td> $totalAmt </td></tr>";
+
 
     ?>
     
