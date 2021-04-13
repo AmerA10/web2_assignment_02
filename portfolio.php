@@ -13,20 +13,12 @@ $historyGateway = new HistoryDB($connection);
 try {
     $userId = $_SESSION['userId'];
     $userEmail = $_SESSION['userEmail'];
-    echo $userId;
-    echo $userEmail;
+
     $closeAmt = 0;
     $valueAmt = 0;
     $totalAmt = 0;
     /*todo::
-    display::
-    company logo
-    company symbol
-    company name
-    number of shares
-    close
-    value = close * number of shares
-    total = all of values added together
+    make the table look good
 
 
     */
@@ -37,24 +29,15 @@ try {
 
         if ($usersGateWay->compareUserId($userId, $userEmail)) {
 
-
             $userStuff = $usersGateWay->getAllForUser($userId);
             $portfolio = $portGateway->getAllForUserPortfolio($userId);
-      
 
-
-
-            echo '</br>';
-           
         }
     }
 } catch (Exception $e) {
 
     die($e->getMessage());
 }
-
-
-
 
 ?>
 <!DOCTYPE html>
