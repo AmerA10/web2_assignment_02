@@ -49,7 +49,6 @@
             <div>
                 <ul class="mainLinks">
 
-                    <li><a href="index.php">Home</a></li>
                     <li><a href="about.php">About</a></li>
                     <li><a href="list.php">Companies</a></li>
                     <?php
