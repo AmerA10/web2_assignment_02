@@ -39,19 +39,19 @@
 
 
 #listImg {
- 
+    height:40%;      
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 40%;
     /*calc functionality taken from https://stackoverflow.com/a/11243226 */
-    height:calc((70vw / (16/10)) /7);
+    height:calc((65vw / (16/10)) /10);
     max-height: 20%;
     object-fit:contain;
     
 }
 
 .logo {
-        height:40%;      
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
 }
 
