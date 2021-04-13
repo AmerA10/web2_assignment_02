@@ -1,4 +1,3 @@
-/* Style the navigation menu */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -54,14 +53,8 @@ ul {
     cursor: pointer;
 }
 
-
-.sitelogo {
-    display: inline;
-    width: 32px;
-    height: 32px;
-}
 .mainLinks {
-    margin: 35px;
+
     width: 90%;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -69,21 +62,28 @@ ul {
     text-align: center;
     font-size: 32px;
     line-height: 1.5em;
+
 }
 .mainLinks a:visited {
     color: white;
 }
 .mainLinks li {
     width: 66.6%;
-    padding: 70px;
+    padding:70px;
     background-color:rgb(145, 172, 252);
 }
 .mainLinks a {
     color:black;
-    padding: 12px;
+    padding:50px;
 }
 
-@media (max-width: 700px) {
+.container{
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
     .mainLinks {
         display: block;
     }
@@ -92,8 +92,8 @@ ul {
     }
 }
 
-h1 {
-    text-align: center;
-    font-size: 50px;
 
+h1 {
+
+    font-size: 50px;
 }
