@@ -54,6 +54,12 @@ ul {
     cursor: pointer;
 }
 
+
+.sitelogo {
+    display: inline;
+    width: 32px;
+    height: 32px;
+
 .mainLinks {
     margin: 35px;
     width: 90%;
@@ -89,4 +95,5 @@ ul {
 h1 {
     text-align: center;
     font-size: 50px;
+
 }

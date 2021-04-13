@@ -56,8 +56,10 @@ try {
 </head>
 
 <body>
+
     <header class="navbar">
         <div class="currentPage">
+             <a href="index.php"><img src='logos/sitelogo.png' class='sitelogo'></a>
             <a href="portfolio.php">Portfolio</a>
             <i class="fa fa-bars menuIcon"></i>
         </div>
@@ -114,5 +116,6 @@ try {
     </table>
 </body>
 <script src="js/main.js"></script>
+
 
 </html>

@@ -11,6 +11,7 @@
 <body>
         <header class="navbar">
             <div class="currentPage">
+                <a href="index.php"><img src='logos/sitelogo.png' class='sitelogo'></a>
                 <a href="list.php">Companies</a>
                 <i class="fa fa-bars menuIcon"></i>
             </div>
@@ -25,13 +26,11 @@
                 <a href="logout.php">Logout</a>
             </div>
         </header>
-        <form>
-            <div>
-                <legend>Filter:</legend>
-                <input type="text" id="filter" placeholder="search for company" list="companylist">
-            </div><br>
-                <div>
-                    <input type="button" value="Go" class="button">
+            <form>
+                <div id='filterbox'>
+                    <label for='filter'>Filter:</label>
+                    <input type="text" id="filter" placeholder="search for company by name" list="companylist">
+                    <input type="reset" value="Reset" class="reset">
                 </div>
                 <nav>
                 <!-- taken from https://tobiasahlin.com/spinkit/ -->
@@ -51,7 +50,9 @@
                 </div>
                 <div id='table_wrapper'>
                     <div id='companytable'>
-                        <table width='100%'>
+
+                        <table>
+
                             <thead>
                                 <tr>
                                     <th><span class="title">Logo</span></th>
