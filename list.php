@@ -47,7 +47,7 @@
                     <div class="sk-circle12 sk-child"></div>
                 </div>
                 <div id='table_wrapper'>
-                    <div id='portfolioTable'>
+                    <div id='companytable'>
 
                         <table>
                             <thead>
