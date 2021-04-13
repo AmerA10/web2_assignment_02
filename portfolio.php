@@ -33,10 +33,8 @@ try {
 
             $userStuff = $usersGateWay->getAllForUser($userId);
             $portfolio = $portGateway->getAllForUserPortfolio($userId);
-            
         }
-    }
-    else {
+    } else {
         header('location: index.php');
     }
 } catch (Exception $e) {
@@ -54,14 +52,14 @@ try {
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel= "stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/portfolio.css">
 </head>
 
 <body>
 
     <header class="navbar">
         <div class="currentPage">
-             <a href="index.php"><img src='logos/sitelogo.png' class='sitelogo'></a>
+            <a href="index.php"><img src='logos/sitelogo.png' class='sitelogo'></a>
             <a href="portfolio.php">Portfolio</a>
             <i class="fa fa-bars menuIcon"></i>
         </div>
@@ -76,47 +74,51 @@ try {
             <a href="logout.php">Logout</a>
         </div>
     </header>
-    <table width = '100%'>
-    <thead>
-    <tr>
-        <th><span class = 'title'>Logo</span></th>
-        <th><span class = 'title'>Symbol</span></th>
-        <th><span class = 'title'>Name</span></th>
-        <th><span class = 'title'>Num of Shares</span></th>
-        <th><span class = 'title'>Close Amt</span></th>
-        <th><span class = 'title'>Value Amt</span></th>
-    </tr>
-    </thead>
-    <tbody id='list'>
-    <?php
+    <div id='table_wrapper'>
+        <div id='portfolioTable'>
+            <table width='100%'>
+                <thead>
+                    <tr>
+                        <th><span class='title'>Logo</span></th>
+                        <th><span class='title'>Symbol</span></th>
+                        <th><span class='title'>Name</span></th>
+                        <th><span class='title'>Num of Shares</span></th>
+                        <th><span class='title'>Close Amt</span></th>
+                        <th><span class='title'>Value Amt</span></th>
+                    </tr>
+                </thead>
+                <tbody id='list'>
+                    <?php
 
-     foreach ($portfolio as $port) { //this gives access to every image logo for the dumbass companies
-        echo '<tr>';
-        echo "<td><img class= 'logo' id='listImg' src=logos/$port[symbol].svg></td>";
-        echo "<td> $port[symbol]</td>";
-        echo "<td>$port[amount]</td>";
-        $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
-        $companyName = $companyGateWay->getAllForCompany($port['symbol']);
-        $companyName = $companyName[0]['name'];
-        echo "<td> $companyName </td>"; 
-        echo "<td>" . $companyHistoryDate[0]['close'] . "</td>";
-        $valueAmt = $companyHistoryDate[0]['close'] * $port['amount'];
-        echo $companyHistoryDate[0]['close'] * $port['amount'];
-        $totalAmt = $totalAmt + $valueAmt;
-        echo "<td>" . $valueAmt . "</td>";
-        //because the order by is desc, the date at the [0] position is the latest
-        echo '</tr>';
-    }
+                    foreach ($portfolio as $port) { //this gives access to every image logo for the dumbass companies
+                        echo '<tr>';
+                        echo "<td><img class= 'logo' id='listImg' src=logos/$port[symbol].svg></td>";
+                        echo "<td> $port[symbol]</td>";
+                        echo "<td>$port[amount]</td>";
+                        $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
+                        $companyName = $companyGateWay->getAllForCompany($port['symbol']);
+                        $companyName = $companyName[0]['name'];
+                        echo "<td> $companyName </td>";
+                        echo "<td>" . $companyHistoryDate[0]['close'] . "</td>";
+                        $valueAmt = $companyHistoryDate[0]['close'] * $port['amount'];
 
-    ?>
-    </tbody>
-    <tfoot>
-    <?php
-    echo "<th> Total Amount <tr><td> $totalAmt </td></tr></th>";
-    ?>
-    
-    </tfoot>
-    </table>
+                        $totalAmt = $totalAmt + $valueAmt;
+                        echo "<td>" . $valueAmt . "</td>";
+                        //because the order by is desc, the date at the [0] position is the latest
+                        echo '</tr>';
+                    }
+
+                    ?>
+                </tbody>
+                <tfoot>
+                    <?php
+                    echo "<th> Total Amount <tr><td> $totalAmt </td></tr></th>";
+                    ?>
+
+                </tfoot>
+            </table>
+        </div>
+    </div>
 </body>
 <script src="js/main.js"></script>
 
