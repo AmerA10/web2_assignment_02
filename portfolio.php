@@ -87,6 +87,7 @@ try {
     </thead>
     <tbody id='list'>
     <?php
+
      foreach ($portfolio as $port) { //this gives access to every image logo for the dumbass companies
         echo '<tr>';
         echo "<td><img class= 'logo' id='listImg' src=logos/$port[symbol].svg></td>";
@@ -107,7 +108,7 @@ try {
     <?php
 
     echo "<tr>";
-    echo "<th> $totalAmt </th>";
+    echo "<td> $totalAmt </td>";
     echo "</tr>";
 
     ?>
