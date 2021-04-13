@@ -58,11 +58,9 @@
                             echo "<li><a href='profile.php'>Profile</a></li>";
                             echo "<li><a href='favorites.php'>Favorites</a></li>";
                             echo "<li><a href='logout.php'>Logout</a></li>";
-                   
-                   
                     }else{
                         echo "<li><a href='login.php'>Login</a></li>";
-                        echo "<li><a href='login.php'>signup</a></li>";
+                        echo "<li><a href='signup.php'>signup</a></li>";
                     }
 
                     ?>
