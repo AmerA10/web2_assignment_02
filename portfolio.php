@@ -96,8 +96,7 @@ try {
         $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
         echo "<td>" . $companyHistoryDate[0]['close'] . "</td>";
         $valueAmt = $companyHistoryDate[0]['close'] * $port['amount'];
-        echo $companyHistoryDate[0]['close'];
-        echo $port['amount'];
+        echo $companyHistoryDate[0]['close'] * $port['amount'];
         $totalAmt += $valueAmt;
         echo "<td>$valueAmt</td>";
         //because the order by is desc, the date at the [0] position is the latest
