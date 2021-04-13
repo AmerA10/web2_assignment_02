@@ -77,12 +77,12 @@ try {
     <table width = '100%'>
     <thead>
     <tr>
-        <th>Logo</th>
-        <th>Symbol</th>
-        <th>name</th>
-        <th>Num of Shares</th>
-        <th>Close Amt</th>
-        <th>Value Amt</th>
+        <th><span class = 'title'>Logo</span></th>
+        <th><span class = 'title'>Symbol</span></th>
+        <th><span class = 'title'>Name</span></th>
+        <th><span class = 'title'>Num of Shares</span></th>
+        <th><span class = 'title'>Close Amt</span></th>
+        <th><span class = 'title'>Value Amt</span></th>
     </tr>
     </thead>
     <tbody>

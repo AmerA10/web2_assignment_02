@@ -1,1 +1,56 @@
 /* Alot of the styling is taken from the list.css */
+#table_wrapper table {
+    width:100%;
+  
+}
+  
+  th {
+    background-color: rgb(64, 124, 255);
+  }
+  
+  td, th {
+    border: 1px black solid;
+    padding: 5px;
+  }
+  
+  .title {
+    font-size: 16pt;
+    font-weight: bold;
+  }
+  
+  th {
+    position: sticky;
+    top: 0;
+  }
+  
+  a:link.link {
+    font-size: 12pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  a:link {
+    text-decoration: none;
+  }
+
+
+
+#listImg {
+ 
+    max-width: 40%;
+    /*calc functionality taken from https://stackoverflow.com/a/11243226 */
+    height:calc((70vw / (16/10)) /7);
+    max-height: 20%;
+    object-fit:contain;
+    
+}
+
+.logo {
+        height:40%;      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
