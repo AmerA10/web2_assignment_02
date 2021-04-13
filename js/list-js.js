@@ -83,7 +83,7 @@ function populateTable(company) {
     let tdlink1 = document.createElement('td');
     let tdlink2 = document.createElement('td');
     
-    tdimg.innerHTML = `<img src="logos/${company.symbol}.svg" style="width: 150px; height: 50px">`;
+    tdimg.innerHTML = `<img id = 'listImg' src="logos/${company.symbol}.svg" style="width: 150px; height: 50px">`;
     tr.appendChild(tdimg);
 
     // creating the larger image to show when hovering
