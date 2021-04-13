@@ -43,6 +43,7 @@
     width: 90%; 
     margin-left: 5%; 
     margin-right: 5%;
+
 }
 
 #companytable {
@@ -86,17 +87,33 @@ a:link.link {
   text-align: center;
 }
 
+
 a:link {
   text-decoration: none;
 }
 
 .logo {
+
+ 
+  height:40%;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+
 .enlargedImg {
   display: none;
   position: absolute;
+}
+#listImg {
+ 
+max-width: 40%;
+/*calc functionality taken from https://stackoverflow.com/a/11243226 */
+height:calc((65vw / (16/10)) /7);
+max-height: 20%;
+object-fit:contain;
+
+
 }

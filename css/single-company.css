@@ -29,6 +29,7 @@
     justify-content: space-evenly;
 }
 
+
 .buttonContainer > a {
     text-decoration: none;
     color: white;
@@ -38,6 +39,7 @@
     padding: 10px;
     width: 150px;
     border-radius: 8px;
+
 }
 
 button:hover {

@@ -50,7 +50,9 @@
                 </div>
                 <div id='table_wrapper'>
                     <div id='companytable'>
+
                         <table>
+
                             <thead>
                                 <tr>
                                     <th><span class="title">Logo</span></th>
@@ -59,6 +61,7 @@
                                 </tr>
                             </thead>
                             <tbody id='list'>
+
                             </tbody>
                         </table>
                     </div>
@@ -68,4 +71,5 @@
     </body>
     <script src="js/main.js"></script>
     <script src="js/list-js.js"></script>
+
 </html>
