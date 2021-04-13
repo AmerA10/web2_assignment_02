@@ -1,23 +1,38 @@
-<?php
-    include 'includes/helpers.inc.php';
-    include 'includes/db-classes.inc.php';
-    include 'includes/config.inc.php';
-    try {
-        $conn = DatabaseHelper::createConnection(array(DBCONNSTRING,DBUSER,DBPASS));
-        $companiesGateway = new CompanyDB($conn);
-        if (isset($_GET['symbol'])) {
-            $company = $companiesGateway->getAllForCompany($_GET['symbol'])[0]; // specifiying index 0, since getAllForCompanies returns a 2D associative array with only one element
 
-        }
-     } catch (PDOException $e) {
-        die( $e->getMessage() );
-     }
+
+<?php 
+require_once 'includes/db-classes.inc.php';
+require_once 'includes/helpers.inc.php'; 
+require_once 'includes/stock-config.inc.php';
+
+$gateway = new CompanyDB($connection);
+try {
+
+    if(isset($_GET['symbol'])) {
+        $symbol = $_GET['symbol'];
+        $company = $gateway->getAllForCompany($symbol)[0];    
+    }
+
+    else  {
+        $symbol = "Not exist";        
+    }
+
+}
+
+catch(Exception $e){
+    die($e ->getMessage());
+}
+
+
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>  
     <title>Assignment #2</title>   
+    
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
     <link rel="stylesheet" href="css/main.css">
@@ -40,6 +55,8 @@
                 <a href="logout.php">Logout</a>
             </div>
         </header>
+
+
         <div id="companyInfo" class="fadeIn defaultView">
             <span id="companyInfoHeader">
                 <img src='logos/<?=$company['symbol']?>.svg' class="logo">
@@ -62,10 +79,40 @@
             </span>
             <br/>
             <div class="buttonContainer">
-                <a href='addtofav.php'>Add to Favorites</a>
+
+
+               
                 <a href='history.php?symbol=<?=$company['symbol']?>&sort=date'>History</a>
+           
+
+                <a href="addtofav.php?symbol=<?=$company['symbol']?>" class="favoritesButton">Add to Favorites</button>
+             
+
             </div>
         </div>
+
+
+        <h1>
+     
+        </h1>
+        <ul id="companylist">
+        <?php
+
+        echo "<li><img src=logos/".$company['symbol'].'.svg></li>'; 
+        echo "<li> " . $company['symbol'] . "</li>";
+        echo '<li> ' . $company['name'] . "</li>";
+        echo "<li> " . $company["sector"] . "</li>";
+        echo "<li> " . $company["subindustry"] . "</li>";
+        echo "<li> " . $company['address'] . "</li>";
+        echo "<li> " . $company['exchange'] . "</li>";
+        echo "<li> " . $company['website'] . "</li>";
+        echo "<li> " . $company['description'] . "</li>";
+
+        ?>
+        </ul>
+
     </body>
     <script src="js/main.js"></script>
+
+
 </html>

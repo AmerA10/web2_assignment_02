@@ -1,11 +1,12 @@
+
 <?php
     include 'includes/helpers.inc.php';
     include 'includes/db-classes.inc.php';
-    include 'includes/config.inc.php';
+    include 'includes/stock-config.inc.php';
 
     try {
-        $conn = DatabaseHelper::createConnection(array(DBCONNSTRING,DBUSER,DBPASS));
-        $historyGateway = new HistoryDB($conn);
+      
+        $historyGateway = new HistoryDB($connection);
         if (isset($_GET['symbol']) && isset($_GET['sort'])) {
             $symbol = $_GET['symbol'];
             $history = $historyGateway->getAllForCompany($_GET['symbol'], $_GET['sort']);
@@ -78,4 +79,5 @@
         </header>
     </body>
     <script src="js/main.js"></script>
+
 </html>
