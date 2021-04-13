@@ -34,6 +34,9 @@ try {
 
         }
     }
+    else {
+        header('location: index.php');
+    }
 } catch (Exception $e) {
 
     die($e->getMessage());
