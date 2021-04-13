@@ -97,8 +97,5 @@ a:link {
 }
 
 #listImg {
-  width: 100%;
-  height: auto;
-  vertical-align: middle;
-  display:flex;
+  object-fit: contain;
 }
