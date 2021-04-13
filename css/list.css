@@ -92,6 +92,7 @@ a:link {
 
 .logo {
   height:40%;
+  max-width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +100,7 @@ a:link {
 
 #listImg {
   max-width: 40%;
-  height:calc((100vw / (16/9)) /4);
+  height:calc((100vw / (16/9)) /8);
   max-height: 20%;
   object-fit:contain;
 }
