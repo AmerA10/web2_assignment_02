@@ -1,4 +1,23 @@
 /* Alot of the styling is taken from the list.css */
+#table_wrapper {
+    display: none;
+    position:relative;
+    width: 90%; 
+    margin-left: 5%; 
+    margin-right: 5%;
+}
+
+#portfolioTable {
+  margin-top:20px;
+  table-layout: fixed;
+}
+
+#portfolioTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#portfolioTable tr:hover {background-color: #ddd;}
+
+
+
 #table_wrapper table {
     width:100%;
   
