@@ -10,7 +10,13 @@ fetch(companyAPI)
         })
     .then( data => {
         companies.push(...data);
-
+        companies.sort(function(a, b){
+            let x = a.symbol.toLowerCase();
+            let y = b.symbol.toLowerCase();
+            if (x < y) {return -1;}
+            if (x > y) {return 1;}
+            return 0;
+        });
         populateCompanyTable(companies);
         MakeClickable();
 
