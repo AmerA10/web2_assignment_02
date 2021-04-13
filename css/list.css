@@ -122,8 +122,8 @@ object-fit:contain;
 
   max-width: 40%;
   /*calc functionality taken from https://stackoverflow.com/a/11243226 */
-  height:calc((100vw / (16/10)));
-  max-height: 20%;
+  height:calc((100vw / (16/9)));
+  max-height: 40%;
   object-fit:contain;
 
 }
