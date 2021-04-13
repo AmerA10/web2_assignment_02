@@ -98,8 +98,8 @@ a:link {
 }
 
 #listImg {
-  max-width: 40%;
-  height:calc((100vw / (16/10)) /4);
+  max-width: 30%;
+  height:calc((100vw / (16/10)) /8);
   max-height: 20%;
   object-fit:contain;
 }
