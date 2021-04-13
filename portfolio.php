@@ -106,7 +106,7 @@ try {
     </tbody>
     <tfoot>
     <?php
-
+    echo "<th> Total Amount <th>";
     echo "<tr>";
     echo "<td> $totalAmt </td>";
     echo "</tr>";
