@@ -13,8 +13,8 @@
     $fav = $_SESSION["fav"];
 
 
-    for($i = 0; $i < count($favorites); $i++) {
-        foreach ($favorites[$keys[$i]] as $array) {
+    for($i = 0; $i < count($fav); $i++) {
+        foreach ($fav[$keys[$i]] as $array) {
            if($_GET['symbol '] == $array['symbol']){
             header("location: " . $_SERVER["HTTP_REFERER"]);
            }
