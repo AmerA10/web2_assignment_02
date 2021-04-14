@@ -55,7 +55,7 @@ function createFavList() {
                   
                     }else{
                         echo "<li><a href='login.php'>Login</a></li>";
-                        echo "<li><a href='login.php'>Signup</a></li>";
+                        echo "<li><a href='signup.php'>Signup</a></li>";
                     }
 
                     ?>
