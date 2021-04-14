@@ -6,7 +6,7 @@ function createFavList() {
         $favorites = $_SESSION['fav'];
     
         $keys = array_keys($favorites);
-    
+        print_r($favorites);
         for($i = 0; $i < count($favorites); $i++) {
             foreach ($favorites[$keys[$i]] as $array) {
                 echo '<tr>';

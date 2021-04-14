@@ -11,7 +11,17 @@
         $_SESSION["fav"] = [];
     }
     $fav = $_SESSION["fav"];
+
+
+    // foreach ($favorites as $key => $value) {
+    //     if() {
+
+    //     }
+    // }
+    
+
     $fav[] = $companiesGateway->getAllForCompany($_GET["symbol"]);
+    
     $_SESSION["fav"] = $fav;
     print_r($fav);
 
