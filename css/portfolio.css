@@ -78,8 +78,9 @@
 }
 
 #total {
-  text-decoration-color:rgb(64, 124, 255); ;
+
   text-decoration: underline;
+  text-decoration-color:rgb(64, 124, 255); 
 }
 
 
