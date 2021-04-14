@@ -74,6 +74,9 @@ try {
             <a href="logout.php">Logout</a>
         </div>
     </header>
+    <div id='table_wrapper'>
+        <div id='portfolioTable'>
+
             <table>
                 <thead>
                     <tr>
@@ -112,11 +115,12 @@ try {
                     <?php
                     echo "<th> Total Amount <tr><td> $totalAmt </td></tr></th>";
                     ?>
-
                 </tfoot>
             </table>
-   
-  
+        </div>
+    </div>
+
+
 </body>
 <script src="js/main.js"></script>
 
