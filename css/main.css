@@ -65,8 +65,9 @@ ul {
     height: 32px;
 }
 .mainLinks {
-
-
+    margin-top: 10vw;
+    margin-right:20vw;
+    margin-left:20vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 35px;
