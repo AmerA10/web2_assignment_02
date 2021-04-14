@@ -95,12 +95,13 @@ try {
                         echo '<tr>';
                         echo "<td><img class='logo' id='listImg' src=logos/$port[symbol].svg></td>";
                         echo "<td> $port[symbol]</td>";
-                        echo "<td>$port[amount]</td>";
                         $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
                         $companyName = $companyGateWay->getAllForCompany($port['symbol']);
                         $companyName = $companyName[0]['name'];
+                        echo "<td>$companyName</td>";
+                        
+                        echo "<td>  $port[amount] </td>";
                         echo "<td>" . $companyHistoryDate[0]['close'] . "</td>";
-                        echo "<td>". $companyName ."</td>";
                         $valueAmt = $companyHistoryDate[0]['close'] * $port['amount'];
 
                         $totalAmt = $totalAmt + $valueAmt;
