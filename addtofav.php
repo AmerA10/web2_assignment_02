@@ -11,15 +11,14 @@
         $_SESSION["fav"] = [];
     }
     $fav = $_SESSION["fav"];
-print_r($fav);
-echo $_GET['symbol'];
+
 
 
     $keys = array_keys($fav);
     for($i = 0; $i < count($fav); $i++) {
         foreach ($fav[$keys[$i]] as $array) {
            if($_GET['symbol'] == $array['symbol']){
-           // header("location: " . $_SERVER["HTTP_REFERER"]);
+            header("location: " . $_SERVER["HTTP_REFERER"]);
             exit();
            }  
         }
@@ -33,5 +32,5 @@ echo $_GET['symbol'];
     //session_destroy();
 
     $conn = null;
-    //header("location: " . $_SERVER["HTTP_REFERER"]);
+    header("location: " . $_SERVER["HTTP_REFERER"]);
 ?>
