@@ -13,11 +13,15 @@
     $fav = $_SESSION["fav"];
 
 
-    // foreach ($favorites as $key => $value) {
-    //     if() {
+    for($i = 0; $i < count($favorites); $i++) {
+        foreach ($favorites[$keys[$i]] as $array) {
+           if($_GET['symbol '] == $array['symbol']){
+            header("location: " . $_SERVER["HTTP_REFERER"]);
+           }
+           
+        }
 
-    //     }
-    // }
+    }
     
 
     $fav[] = $companiesGateway->getAllForCompany($_GET["symbol"]);
