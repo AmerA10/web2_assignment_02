@@ -92,6 +92,7 @@ ul {
 }
 .mainLinks a {
     color:black;
+    text-decoration-color: white;
     padding: 12px;
 }
 
