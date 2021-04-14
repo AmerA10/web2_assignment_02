@@ -1,11 +1,12 @@
+
 <?php 
   include 'includes/helpers.inc.php';
   include 'includes/db-classes.inc.php';
-  include 'includes/config.inc.php';
+  include 'includes/stock-config.inc.php';
 
   session_start();
 
-  if (isset($_SESSION[("loggedin")])){
+  if ((isset($_SESSION[("loggedin")]) && $_SESSION['loggedin'])){
     header("location: index.php");
 }
 
@@ -24,17 +25,17 @@
 <body>
         <header class="navbar">
             <div class="currentPage">
+                <a href="index.php"><img src='logos/sitelogo.png' class='sitelogo'></a>
                 <a href="login.php">Login</a>
                 <i class="fa fa-bars menuIcon"></i>
             </div>
             
             <div class="pageLinks">
+                <a href ='index.php'>Home</a>
                 <a href="about.php">About</a>
                 <a href="list.php">Companies</a>
-                <a href="portfolio.php">Portfolio</a>
-                <a href="profile.php">Profile</a>
-                <a href="favorites.php">Favorites</a>
-                <a href="logout.php">Logout</a>
+               
+             
             </div>
         </header>
 
@@ -45,15 +46,12 @@
 
       <form method="post" action= "includes\login.inc.php">
         <input type="text" id="login" class="fadeIn second" name="email" placeholder="email">
-        <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
+        <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
         <input type="submit" class="fadeIn fourth" value="Log In">
       </form>
     
     </body>
    
     <script src="js/main.js"></script>
-</html>
 
-    
-    <script src="js/main.js"></script>
 </html>

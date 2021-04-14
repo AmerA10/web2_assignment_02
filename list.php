@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,31 +7,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/list.css">
+    
 </head>
 <body>
         <header class="navbar">
             <div class="currentPage">
+                <a href="index.php"><img src='logos/sitelogo.png' class='sitelogo'></a>
                 <a href="list.php">Companies</a>
                 <i class="fa fa-bars menuIcon"></i>
             </div>
             
-            <div class="pageLinks">
-                <a href="index.php">Home</a>
-                <a href="about.php">About</a>
-                <a href="list.php">Companies</a>
-                <a href="portfolio.php">Portfolio</a>
-                <a href="profile.php">Profile</a>
-                <a href="favorites.php">Favorites</a>
-                <a href="logout.php">Logout</a>
-            </div>
+            <nav class="pageLinks">
+                <ul>
+
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="list.php">Companies</a></li>
+                    <?php
+                    if (isset($_SESSION[("loggedin")]) && $_SESSION['loggedin']) {
+                    
+                            echo "<li><a href='portfolio.php'>Portfolio</a></li>";
+                            echo "<li><a href='profile.php'>Profile</a></li>";
+                            echo "<li><a href='favorites.php'>Favorites</a></li>";
+                            echo "<li><a href='logout.php'>Logout</a></li>";
+                  
+                    }else{
+                        echo "<li><a href='login.php'>Login</a></li>";
+                        echo "<li><a href='signup.php'>Signup</a></li>";
+                    }
+
+                    ?>
+                </ul>
+            </nav>
         </header>
-        <form>
-            <div>
-                <legend>Filter:</legend>
-                <input type="text" id="filter" placeholder="search for company" list="companylist">
-            </div><br>
-                <div>
-                    <input type="button" value="Go" class="button">
+            <form>
+                <div id='filterbox'>
+                    <label for='filter'>Filter:</label>
+                    <input type="text" id="filter" placeholder="search for company by name" list="companylist">
+                    <input type="reset" value="Reset" class="reset">
                 </div>
                 <nav>
                 <!-- taken from https://tobiasahlin.com/spinkit/ -->
@@ -52,11 +62,28 @@
                     <div class="sk-circle11 sk-child"></div>
                     <div class="sk-circle12 sk-child"></div>
                 </div>
-                    <ul id="companylist">
-                    </ul>
+                <div id='table_wrapper'>
+                    <div id='companytable'>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><span class="title">Logo</span></th>
+                                    <th><span class="title">Symbol</span></th>
+                                    <th><span class="title">Name</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id='list'>
+
+                        
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 </nav>
             </form>
     </body>
     <script src="js/main.js"></script>
     <script src="js/list-js.js"></script>
+
 </html>

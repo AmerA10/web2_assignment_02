@@ -1,0 +1,84 @@
+.bold {
+    font-weight: bold;
+    font-size: 18pt;
+    color: rgb(66, 66, 66);
+}
+
+#companyInfoHeader {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    font-size: 24pt;
+}
+
+#companyInfoBody {
+    font-size: 16pt;
+    width: 50%;
+    margin: auto;
+}
+
+#companyInfo {
+    padding: 5px;
+}
+
+.description {
+    text-align: center;
+}
+
+.logo {
+    max-width: 30%;
+}
+
+.name, .symbol, .logo {
+    padding: 10px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-evenly;
+    clear: both;
+    padding-top: 20px;
+}
+
+.buttonContainer > a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(64, 124, 255);
+    text-align: center;
+    padding: 10px;
+    width: 150px;
+    border-radius: 8px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.leftContainer {
+    width: 40%;
+    float: left;
+}
+
+.rightContainer {
+    width: 40%;
+    float: right;
+    text-align: end;
+}
+
+hr {
+    border-top:1px solid rgb(64, 124, 255);
+}
+
+@media (max-width: 900px) {
+    #companyInfoHeader {
+        width: 80%;
+        font-size: 16pt;
+    }
+
+    #companyInfoBody {
+        width: 80%;
+        font-size: 14pt;
+    }
+}
