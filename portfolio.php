@@ -103,11 +103,14 @@ try {
 
                         echo "<td>" . "<a class='link' href=single-company.php?symbol=$symbol>$companyName</td>"; 
                         echo "<td>  $port[amount] </td>";
+
                         $closeAmt = number_format((float)$companyHistoryDate[0]['close'], 2);
+
                         echo "<td>" . "$ " .  $closeAmt . "</td>";
                         $valueAmt = (float)$companyHistoryDate[0]['close'] * (float)$port['amount'];
-                        $valueAmt = number_format($valueAmt, 2);
                         (float)$totalAmt = (float)$totalAmt + (float)$valueAmt;
+                        $valueAmt = number_format($valueAmt, 2);
+                      
                         echo $totalAmt . "</br>";
                         echo "<td>" . "$ " . $valueAmt . "</td>";
                         //because the order by is desc, the date at the [0] position is the latest
