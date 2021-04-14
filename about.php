@@ -79,7 +79,8 @@ session_start();
                     <li><a href='https://www.php.net/manual/en/function.number-format.php'>PHP Number Format Help</a></li>
                     <li><a href='https://codepen.io/danzawadzki/pen/EgqKRr'>CSS for Login Page</a></li>
                     <li><a href='https://tobiasahlin.com/spinkit/'>CSS for loading symbol</a></li>
-                    <li><a href='https://stackoverflow.com/a/11243226'>CSS for calculating logo sizss</a></li>v
+                    <li><a href='https://stackoverflow.com/a/11243226'>CSS for calculating logo sizss</a></li>
+                    <li><a href='https://fontawesome.com/'>Font Awesome Hamburger Menu Icon</a></li>
                 </ul>
             </div>
         </body>
