@@ -113,7 +113,7 @@ try {
                 </tbody>
                 
             </table>
-            <h2> Total:  <?php $totalAmt?></h2>
+            <h2> Total:  <?php echo $totalAmt?></h2>
         </div>
     </div>
 
