@@ -77,8 +77,10 @@ ul {
     line-height: 1.5em;
 
 }
-.mainLinks a:visited {
-    color: white;
+.mainLink a:hover {
+    text-decoration-color: black;
+    color:white;
+
 }
 .mainLinks li {
 
