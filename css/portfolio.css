@@ -82,6 +82,8 @@
   border-left:5px solid rgb(64, 124, 255);
   border-bottom:5px solid rgb(64, 124, 255);
   background-color: lightgray;
+  float: right;
+  width: 20vw;
 }
 
 
