@@ -13,6 +13,9 @@
     $fav = $_SESSION["fav"];
 print_r($fav);
 echo $_GET['symbol'];
+
+
+    $keys = array_keys($fav);
     for($i = 0; $i < count($fav); $i++) {
         foreach ($fav[$keys[$i]] as $array) {
            if($_GET['symbol'] == $array['symbol']){
