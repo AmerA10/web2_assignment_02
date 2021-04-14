@@ -1,9 +1,9 @@
+
 <?php
 
 session_start();
 
 ?>
-
 
 
 <!DOCTYPE html>
@@ -23,6 +23,7 @@ session_start();
                 <i class="fa fa-bars menuIcon"></i>
             </div>
             
+
             <nav class="pageLinks">
                 <ul>
 
@@ -45,6 +46,7 @@ session_start();
                     ?>
                 </ul>
             </nav>
+
         </header>
         <h1>COMING SOON!</h1>
     </body>
