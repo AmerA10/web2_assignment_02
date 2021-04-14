@@ -94,11 +94,11 @@ try {
                     foreach ($portfolio as $port) { //this gives access to every image logo for the dumbass companies
                         echo '<tr>';
                         echo "<td><img class='logo' id='listImg' src=logos/$port[symbol].svg></td>";
-                        echo "<td> $port[symbol]</td>";
+                        echo "<td>" . "<a class='link' href='single-company.php?symbol'=" . $port['symbol'].">$port[symbol]</td>";
                         $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
                         $companyName = $companyGateWay->getAllForCompany($port['symbol']);
                         $companyName = $companyName[0]['name'];
-                        echo "<td>$companyName</td>"; 
+                        echo "<td>" . "<a class='link' href='single-company.php?symbol'=" . $port['symbol'].">$companyName</td>"; 
                         echo "<td>  $port[amount] </td>";
                         $closeAmt = number_format((float)$companyHistoryDate[0]['close'], 2);
                         echo "<td>" . "$ " .  $closeAmt . "</td>";
