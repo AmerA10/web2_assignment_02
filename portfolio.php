@@ -101,11 +101,11 @@ try {
                         echo "<td>$companyName</td>"; 
                         echo "<td>  $port[amount] </td>";
                         $closeAmt = number_format((float)$companyHistoryDate[0]['close'], 2);
-                        echo "<td>" . $closeAmt . "</td>";
+                        echo "<td>" . "$ " .  $closeAmt . "</td>";
                         $valueAmt = (float)$companyHistoryDate[0]['close'] * (float)$port['amount'];
                         $valueAmt = number_format($valueAmt, 2);
                         $totalAmt = (float)$totalAmt + (float)$valueAmt;
-                        echo "<td>" . $valueAmt . "</td>";
+                        echo "<td>" . "$ " . $valueAmt . "</td>";
                         //because the order by is desc, the date at the [0] position is the latest
                         echo '</tr>';
                     }
@@ -115,7 +115,7 @@ try {
                 
             </table>
             <?php $totalAmt = number_format($totalAmt, 2); ?>
-            <h2 id = 'total' > Total:  <?php echo $totalAmt?></h2>
+            <h2 id = 'total' > Total:  <?php echo "$ " .  $totalAmt?></h2>
         </div>
     </div>
 
