@@ -57,6 +57,14 @@
     text-decoration: none;
   }
 
+.logo {
+
+ 
+    height:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 #listImg {
