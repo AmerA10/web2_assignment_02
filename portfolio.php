@@ -98,12 +98,12 @@ try {
                         $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
                         $companyName = $companyGateWay->getAllForCompany($port['symbol']);
                         $companyName = $companyName[0]['name'];
-                        echo "<td>$companyName</td>";
-                        
+                        echo "<td>$companyName</td>"; 
                         echo "<td>  $port[amount] </td>";
-                        echo "<td>" . $companyHistoryDate[0]['close'] . "</td>";
+                        $closeAmt = number_format($$companyHistoryDate[0]['close'], 2);
+                        echo "<td>" . $closeAmt . "</td>";
                         $valueAmt = $companyHistoryDate[0]['close'] * $port['amount'];
-
+                        $valueAmt = number_format($valueAmt, 2);
                         $totalAmt = $totalAmt + $valueAmt;
                         echo "<td>" . $valueAmt . "</td>";
                         //because the order by is desc, the date at the [0] position is the latest
@@ -114,7 +114,8 @@ try {
                 </tbody>
                 
             </table>
-            <h2 > Total:  <?php echo $totalAmt?></h2>
+            <?php $totalAmt = number_format($totalAmt, 2); ?>
+            <h2 id = 'total' > Total:  <?php echo $totalAmt?></h2>
         </div>
     </div>
 
