@@ -9,6 +9,7 @@
 #portfolioTable {
   margin-top:20px;
   table-layout: fixed;
+  empty-cells: hide;
 }
 
 #portfolioTable tr:nth-child(even){background-color: #f2f2f2;}
