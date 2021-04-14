@@ -107,7 +107,7 @@ try {
                         echo "<td>" . "$ " .  $closeAmt . "</td>";
                         $valueAmt = (float)$companyHistoryDate[0]['close'] * (float)$port['amount'];
                         $valueAmt = number_format($valueAmt, 2);
-                        $totalAmt = (float)$totalAmt + (float)$valueAmt;
+                        (float)$totalAmt = $totalAmt + $valueAmt;
                         echo "<td>" . "$ " . $valueAmt . "</td>";
                         //because the order by is desc, the date at the [0] position is the latest
                         echo '</tr>';
