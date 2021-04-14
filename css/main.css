@@ -34,6 +34,7 @@ body {
 ul {
     list-style-type: none;
     margin:auto;
+    padding: unset;
 }
 
 .pageLinks a:hover {
