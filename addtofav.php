@@ -11,18 +11,17 @@
         $_SESSION["fav"] = [];
     }
     $fav = $_SESSION["fav"];
-
-
+print_r($fav);
+echo $_GET['symbol'];
     for($i = 0; $i < count($fav); $i++) {
         foreach ($fav[$keys[$i]] as $array) {
-           if($_GET['symbol '] == $array['symbol']){
-            header("location: " . $_SERVER["HTTP_REFERER"]);
+           if($_GET['symbol'] == $array['symbol']){
+           // header("location: " . $_SERVER["HTTP_REFERER"]);
             exit();
            }  
         }
     }
     
-
     $fav[] = $companiesGateway->getAllForCompany($_GET["symbol"]);
     
     $_SESSION["fav"] = $fav;
@@ -31,5 +30,5 @@
     //session_destroy();
 
     $conn = null;
-    header("location: " . $_SERVER["HTTP_REFERER"]);
+    //header("location: " . $_SERVER["HTTP_REFERER"]);
 ?>
