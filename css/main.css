@@ -33,6 +33,7 @@ body {
 
 ul {
     list-style-type: none;
+    margin:auto;
 }
 
 .pageLinks a:hover {
@@ -52,6 +53,8 @@ ul {
 
 .menuIcon:hover {
     cursor: pointer;
+    text-decoration-color: ghostwhite;
+    color:black;
 }
 
 
