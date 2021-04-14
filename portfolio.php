@@ -95,13 +95,13 @@ try {
                         echo '<tr>';
                         echo "<td><img class='logo' id='listImg' src=logos/$port[symbol].svg></td>";
                         $symbol = $port['symbol'];
-                        echo "<td>" . "<a class='link' href='single-company.php?symbol'=$symbol>$symbol</td>";
+                        echo "<td>" . "<a class='link' href='single-company.php?symbol='$symbol>$symbol</td>";
 
                         $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
                         $companyName = $companyGateWay->getAllForCompany($port['symbol']);
                         $companyName = $companyName[0]['name'];
 
-                        echo "<td>" . "<a class='link' href='single-company.php?symbol'=$symbol>$companyName</td>"; 
+                        echo "<td>" . "<a class='link' href='single-company.php?symbol='$symbol>$companyName</td>"; 
                         echo "<td>  $port[amount] </td>";
                         $closeAmt = number_format((float)$companyHistoryDate[0]['close'], 2);
                         echo "<td>" . "$ " .  $closeAmt . "</td>";
