@@ -102,7 +102,7 @@ try {
                         echo "<td>  $port[amount] </td>";
                         $closeAmt = number_format((float)$companyHistoryDate[0]['close'], 2);
                         echo "<td>" . $closeAmt . "</td>";
-                        $valueAmt = $companyHistoryDate[0]['close'] * $port['amount'];
+                        $valueAmt = (float)$companyHistoryDate[0]['close'] * (float)$port['amount'];
                         $valueAmt = number_format($valueAmt, 2);
                         $totalAmt = $totalAmt + $valueAmt;
                         echo "<td>" . $valueAmt . "</td>";
