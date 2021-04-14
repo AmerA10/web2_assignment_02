@@ -35,6 +35,7 @@ function createFavList() {
 <body>
         <header class="navbar">
             <div class="currentPage">
+                <a href='index.php'><img src="logos/sitelogo.png" class="sitelogo"></a>
                 <a href="favorites.php">Favourites</a>
                 <i class="fa fa-bars menuIcon"></i>
             </div>
