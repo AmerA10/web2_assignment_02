@@ -79,8 +79,9 @@
 
 #total {
 
-  text-decoration: underline;
-  text-decoration-color:rgb(64, 124, 255); 
+  border-left:5px solid rgb(64, 124, 255);
+  border-bottom:5px solid rgb(64, 124, 255);
+  background-color: lightgray;
 }
 
 
