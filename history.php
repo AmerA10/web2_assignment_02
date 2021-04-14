@@ -3,7 +3,7 @@
     include 'includes/helpers.inc.php';
     include 'includes/db-classes.inc.php';
     include 'includes/stock-config.inc.php';
-
+    session_start();
     try {
       
         $historyGateway = new HistoryDB($connection);
@@ -13,7 +13,7 @@
         }
      } catch (PDOException $e) {
         die( $e->getMessage() );
-     }
+    }
 ?>
 <!DOCTYPE html>
 <html>
