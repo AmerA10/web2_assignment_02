@@ -93,7 +93,7 @@ try {
 
                     foreach ($portfolio as $port) { //this gives access to every image logo for the dumbass companies
                         echo '<tr>';
-                        echo "<td><img class= 'logo' id='listImg' src=logos/$port[symbol].svg></td>";
+                        echo "<td><img class='logo' id='listImg' src=logos/$port[symbol].svg></td>";
                         echo "<td> $port[symbol]</td>";
                         echo "<td>$port[amount]</td>";
                         $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
