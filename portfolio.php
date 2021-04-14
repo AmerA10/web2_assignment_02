@@ -111,7 +111,7 @@ try {
                         (float)$totalAmt = (float)$totalAmt + (float)$valueAmt;
                         $valueAmt = number_format($valueAmt, 2);
                       
-                        echo $totalAmt . "</br>";
+                       
                         echo "<td>" . "$ " . $valueAmt . "</td>";
                         //because the order by is desc, the date at the [0] position is the latest
                         echo '</tr>';

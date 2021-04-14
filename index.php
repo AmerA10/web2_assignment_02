@@ -38,7 +38,7 @@
                   
                     }else{
                         echo "<li><a href='login.php'>Login</a></li>";
-                        echo "<li><a href='login.php'>signup</a></li>";
+                        echo "<li><a href='login.php'>Signup</a></li>";
                     }
 
                     ?>
