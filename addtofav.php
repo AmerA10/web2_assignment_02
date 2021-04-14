@@ -5,6 +5,12 @@
 
     session_start();
 
+    if (!isset($_SESSION["loggedin"]) || !$_SESSION['loggedin']) {
+        header("location: " . $_SERVER["HTTP_REFERER"]);
+        exit();
+    }
+
+
     $companiesGateway = new CompanyDB($connection);
 
     if(!isset($_SESSION["fav"])) {
