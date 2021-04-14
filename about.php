@@ -27,7 +27,9 @@ session_start();
                     <li><a href="about.php">About</a></li>
                     <li><a href="list.php">Companies</a></li>
                     <?php
-                    if (isset($_SESSION[("loggedin")]) && $_SESSION['loggedin']) {
+
+                    if (isset($_SESSION["loggedin"]) && $_SESSION['loggedin']) {
+
                     
                             echo "<li><a href='portfolio.php'>Portfolio</a></li>";
                             echo "<li><a href='profile.php'>Profile</a></li>";
