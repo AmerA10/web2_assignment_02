@@ -51,7 +51,7 @@ session_start();
                 <hr>
                 <p>The source code for this site can be found <a href='https://github.com/AmerA10/web2_assignment_02/tree/main'>at our public repo here</a>. Each student has their own branch where their contributions can be found.
                 <p>This assignment was designed by Randy Connolly at Mount Royal University, and completed by the following students:</p>
-                <ul>
+                <ul id = 'aboutLi'>
                     <li>
                         Amer Alagami<br>
                         <a href='https://github.com/AmerA10'>https://github.com/AmerA10</a>
