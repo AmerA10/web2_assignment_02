@@ -17,10 +17,9 @@
         foreach ($fav[$keys[$i]] as $array) {
            if($_GET['symbol '] == $array['symbol']){
             header("location: " . $_SERVER["HTTP_REFERER"]);
-           }
-           
+            exit();
+           }  
         }
-
     }
     
 
