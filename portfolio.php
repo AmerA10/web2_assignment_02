@@ -99,8 +99,8 @@ try {
                         $companyHistoryDate = $historyGateway->getDateForHistory($port['symbol']);
                         $companyName = $companyGateWay->getAllForCompany($port['symbol']);
                         $companyName = $companyName[0]['name'];
-                        echo "<td> $companyName </td>";
-                        echo "<td>" . $companyHistoryDate[0]['close'] . "</td>";
+                        echo "<td> . $companyHistoryDate[0]['close'] . </td>";
+                        echo "<td>". $companyName ."</td>";
                         $valueAmt = $companyHistoryDate[0]['close'] * $port['amount'];
 
                         $totalAmt = $totalAmt + $valueAmt;
@@ -113,7 +113,7 @@ try {
                 </tbody>
                 
             </table>
-            <h2> Total:  <?php echo $totalAmt?></h2>
+            <h2 > Total:  <?php echo $totalAmt?></h2>
         </div>
     </div>
 
